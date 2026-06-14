@@ -109,67 +109,69 @@ export function Header() {
         <AnimatePresence>
           {activeMenu && (
             <motion.div
-              initial={{ opacity: 0, y: -8 }}
+              initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2 }}
-              className="absolute right-0 left-0 hidden border-t border-brand/10 bg-white shadow-xl xl:block"
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
+              className="absolute right-0 left-0 hidden border-t border-brand/8 bg-white/98 shadow-[0_20px_60px_rgba(0,0,0,0.09)] backdrop-blur-xl xl:block"
             >
               {navMenu
                 .filter((section) => section.label === activeMenu && section.children)
                 .map((section) => (
-                  <div key={section.label} className="container-wide px-5 py-8 md:px-10 lg:px-16">
-                    <div className="mb-6 flex items-end justify-between gap-6 border-b border-brand/10 pb-5">
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-                          {section.label}
+                  <div key={section.label} className="container-wide flex gap-0 px-5 py-8 md:px-10 lg:px-16">
+
+                    {/* LEFT — section overview sidebar */}
+                    <div className="w-[240px] shrink-0 border-r border-brand/8 pr-8">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand">
+                        {section.label}
+                      </p>
+                      {section.description && (
+                        <p className="mt-3 max-w-[200px] text-sm leading-relaxed text-muted">
+                          {section.description}
                         </p>
-                        {section.description && (
-                          <p className="mt-2 max-w-xl text-sm text-muted">
-                            {section.description}
-                          </p>
-                        )}
-                      </div>
+                      )}
                       {section.href && (
                         <a
                           href={section.href}
-                          className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:text-brand-dark"
+                          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-colors hover:text-ink"
                           onClick={() => setActiveMenu(null)}
                         >
                           View all
-                          <ArrowUpRight className="h-4 w-4" />
+                          <ArrowUpRight className="h-3.5 w-3.5" />
                         </a>
                       )}
                     </div>
 
+                    {/* RIGHT — nav items grid */}
                     <div
-                      className={`grid gap-3 ${
-                        (section.children?.length ?? 0) > 4
-                          ? "sm:grid-cols-2 lg:grid-cols-3"
-                          : "sm:grid-cols-2 lg:grid-cols-4"
+                      className={`flex-1 grid gap-1 pl-8 content-start ${
+                        (section.children?.length ?? 0) >= 5
+                          ? "sm:grid-cols-3"
+                          : "sm:grid-cols-2"
                       }`}
                     >
                       {section.children?.map((item) => (
                         <a
                           key={item.label}
                           href={item.href}
-                          className="group rounded-xl border border-transparent p-4 transition-all hover:border-brand/15 hover:bg-surface"
+                          className="group flex items-start gap-3 rounded-xl px-4 py-3.5 transition-all hover:bg-surface"
                           onClick={() => setActiveMenu(null)}
                         >
-                          <div className="flex items-start justify-between gap-3">
-                            <p className="font-display text-base font-semibold text-ink group-hover:text-brand">
+                          <span className="mt-[0.32rem] h-1.5 w-1.5 shrink-0 rounded-full bg-brand/22 transition-colors group-hover:bg-brand" />
+                          <div>
+                            <p className="font-display text-[15px] font-semibold leading-tight text-ink transition-colors group-hover:text-brand">
                               {item.label}
                             </p>
-                            <ArrowUpRight className="h-4 w-4 shrink-0 text-brand/0 transition-all group-hover:text-brand" />
+                            {item.description && (
+                              <p className="mt-1 text-xs leading-relaxed text-muted">
+                                {item.description}
+                              </p>
+                            )}
                           </div>
-                          {item.description && (
-                            <p className="mt-2 text-sm leading-relaxed text-muted">
-                              {item.description}
-                            </p>
-                          )}
                         </a>
                       ))}
                     </div>
+
                   </div>
                 ))}
             </motion.div>
@@ -197,9 +199,9 @@ export function Header() {
               </button>
             </div>
 
-            <div className="h-[calc(100vh-72px)] overflow-y-auto px-5 py-4">
+            <div className="h-[calc(100vh-72px)] overflow-y-auto px-5 py-2">
               {navMenu.map((section) => (
-                <div key={section.label} className="border-b border-black/5">
+                <div key={section.label} className="border-b border-black/[0.06]">
                   <button
                     type="button"
                     className="flex w-full items-center justify-between py-4 text-left"
@@ -209,13 +211,15 @@ export function Header() {
                       )
                     }
                   >
-                    <span className="font-display text-lg font-semibold text-ink">
+                    <span className={`font-display text-lg font-semibold transition-colors ${
+                      mobileSection === section.label ? "text-brand" : "text-ink"
+                    }`}>
                       {section.label}
                     </span>
                     {section.children && (
                       <ChevronDown
-                        className={`h-5 w-5 text-muted transition-transform ${
-                          mobileSection === section.label ? "rotate-180" : ""
+                        className={`h-4.5 w-4.5 text-muted/60 transition-transform ${
+                          mobileSection === section.label ? "rotate-180 text-brand" : ""
                         }`}
                       />
                     )}
@@ -227,24 +231,28 @@ export function Header() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden pb-4"
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden pb-3"
                       >
-                        <div className="space-y-1 pl-1">
+                        <div className="ml-1 space-y-0.5 border-l-2 border-brand/15 pl-4">
                           {section.children.map((item) => (
                             <a
                               key={item.label}
                               href={item.href}
-                              className="block rounded-lg px-3 py-3 hover:bg-surface"
+                              className="group flex items-start gap-2.5 rounded-lg px-3 py-3 transition-colors hover:bg-surface"
                               onClick={closeMenus}
                             >
-                              <p className="text-sm font-semibold text-ink">
-                                {item.label}
-                              </p>
-                              {item.description && (
-                                <p className="mt-1 text-xs text-muted">
-                                  {item.description}
+                              <span className="mt-[0.3rem] h-1.5 w-1.5 shrink-0 rounded-full bg-brand/25 group-hover:bg-brand transition-colors" />
+                              <div>
+                                <p className="text-sm font-semibold text-ink group-hover:text-brand transition-colors">
+                                  {item.label}
                                 </p>
-                              )}
+                                {item.description && (
+                                  <p className="mt-0.5 text-xs text-muted">
+                                    {item.description}
+                                  </p>
+                                )}
+                              </div>
                             </a>
                           ))}
                         </div>
@@ -255,10 +263,11 @@ export function Header() {
                   {!section.children && section.href && (
                     <a
                       href={section.href}
-                      className="block pb-4 text-sm text-brand"
+                      className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand"
                       onClick={closeMenus}
                     >
-                      View section -&gt;
+                      View section
+                      <ArrowUpRight className="h-3.5 w-3.5" />
                     </a>
                   )}
                 </div>

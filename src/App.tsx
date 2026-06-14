@@ -9,6 +9,7 @@ import { Industries } from "./components/Industries"
 import { About } from "./components/About"
 import { Works } from "./components/Works"
 import { FAQ } from "./components/FAQ"
+import { GlobalPresence } from "./components/GlobalPresence"
 import { Contact } from "./components/Contact"
 import { Insights } from "./components/Insights"
 import { Footer } from "./components/Footer"
@@ -28,6 +29,7 @@ export default function App() {
         <About />
         <Works />
         <FAQ />
+        <GlobalPresence />
         <Contact />
         <Insights />
       </main>

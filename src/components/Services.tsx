@@ -1,106 +1,105 @@
-import { useState } from "react"
 import { motion } from "framer-motion"
-import { ChevronRight } from "lucide-react"
 import { SectionLabel } from "./SectionLabel"
 import { services } from "../data/content"
 
-export function Services() {
-  const [active, setActive] = useState(0)
-  const current = services[active]
+const rowAccents = [
+  { num: "text-brand", dot: "bg-brand", bar: "border-l-brand/30" },
+  { num: "text-aegean", dot: "bg-aegean", bar: "border-l-aegean/30" },
+  { num: "text-patina", dot: "bg-patina", bar: "border-l-patina/30" },
+  { num: "text-copper", dot: "bg-copper", bar: "border-l-copper/35" },
+  { num: "text-ion", dot: "bg-ion", bar: "border-l-ion/30" },
+]
 
+export function Services() {
   return (
     <section id="services" className="section-padding bg-surface">
       <div className="container-wide">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+
+        {/* — Header: left title / right intro — */}
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-20 mb-16 pb-12 border-b border-brand/10">
           <div>
             <SectionLabel>Capabilities</SectionLabel>
-            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-tight font-semibold text-ink">
+            <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.5rem)] leading-tight font-semibold text-ink">
               Capabilities for
               <br />
               <span className="italic text-brand">serious technology work</span>
             </h2>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-muted">
-              The group can deliver one focused capability or assemble a
-              cross-brand team around complex work. Each service has a lead
-              owner, but no discipline operates in isolation.
-            </p>
           </div>
-
-          <div className="space-y-2">
-            {services.map((service, i) => (
-              <button
-                key={service.id}
-                type="button"
-                onClick={() => setActive(i)}
-                className={`flex w-full items-center justify-between rounded-xl px-5 py-4 text-left transition-all ${
-                  active === i
-                    ? "bg-ink text-white"
-                    : "bg-white text-ink hover:bg-brand/5"
-                }`}
-              >
-                <span className="font-display text-base font-semibold md:text-lg">
-                  {service.title}
-                </span>
-                <ChevronRight
-                  className={`h-5 w-5 shrink-0 transition-transform ${
-                    active === i ? "rotate-90" : ""
-                  }`}
-                />
-              </button>
-            ))}
-          </div>
+          <p className="text-base leading-relaxed text-muted border-l border-brand/15 pl-6">
+            The group can deliver one focused capability or assemble a cross-brand
+            team around complex work. Each capability has a lead brand owner, but no
+            discipline operates in isolation — engineering, cloud, AI, security, and
+            design are built to connect.
+          </p>
         </div>
 
-        <motion.div
-          key={current.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="mt-12 rounded-2xl border border-brand/10 bg-white p-8 md:p-12"
-        >
-          <h3 className="font-display text-xl font-semibold text-ink md:text-2xl">
-            {current.title}
-          </h3>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
-            {current.description}
-          </p>
-          <div className="mt-8 grid gap-5 border-y border-brand/10 py-6 md:grid-cols-[1fr_0.8fr]">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-                Expected outcome
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-ink">
-                {current.outcome}
-              </p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-                Brand mix
-              </p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {current.ownedBy.map((brand) => (
-                  <span
-                    key={brand}
-                    className="rounded-full border border-brand/15 bg-surface px-3 py-1 text-xs font-medium text-muted"
-                  >
-                    {brand}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {current.items.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-3 text-sm text-ink"
+        {/* — Service rows — */}
+        <div className="divide-y divide-brand/8">
+          {services.map((service, i) => {
+            const accent = rowAccents[i]
+            return (
+              <motion.article
+                key={service.id}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                className="group grid gap-y-6 rounded-xl py-10 transition-colors hover:bg-white lg:grid-cols-[6rem_1fr_1fr] lg:gap-x-12 lg:px-8 lg:py-12"
               >
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+                {/* Number column */}
+                <div className="flex items-center gap-4 lg:block">
+                  <span className={`font-display text-3xl font-semibold leading-none ${accent.num}`}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+                {/* LEFT content: title + brands + items */}
+                <div>
+                  <h3 className="font-display text-2xl font-semibold leading-tight text-ink md:text-[1.65rem]">
+                    {service.title}
+                  </h3>
+
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {service.ownedBy.map((brand) => (
+                      <span
+                        key={brand}
+                        className="rounded-full border border-black/8 bg-white px-2.5 py-1 text-[10px] font-medium text-muted"
+                      >
+                        {brand}
+                      </span>
+                    ))}
+                  </div>
+
+                  <ul className="mt-5 space-y-2">
+                    {service.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-sm text-muted">
+                        <span className={`mt-[0.4rem] h-1 w-3 shrink-0 rounded-full ${accent.dot} opacity-60`} />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* RIGHT content: description + outcome */}
+                <div>
+                  <p className="text-base leading-relaxed text-muted">
+                    {service.description}
+                  </p>
+
+                  <div className={`mt-6 border-l-2 pl-4 ${accent.bar}`}>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand">
+                      Outcome
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink">
+                      {service.outcome}
+                    </p>
+                  </div>
+                </div>
+              </motion.article>
+            )
+          })}
+        </div>
+
       </div>
     </section>
   )

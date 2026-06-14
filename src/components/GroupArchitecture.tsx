@@ -2,106 +2,162 @@ import { motion } from "framer-motion"
 import { SectionLabel } from "./SectionLabel"
 import { brands, operatingLayers, platformPillars } from "../data/content"
 
-const positions = [
-  "left-1/2 top-0 -translate-x-1/2",
-  "right-0 top-1/4 -translate-y-1/2",
-  "right-6 bottom-10",
-  "left-1/2 bottom-0 -translate-x-1/2",
-  "left-6 bottom-10",
-  "left-0 top-1/4 -translate-y-1/2",
-]
+const brandDots = ["bg-brand", "bg-aegean-light", "bg-patina", "bg-copper", "bg-brand-light", "bg-aegean"]
+const brandTagColors = ["text-brand-light", "text-aegean-light", "text-white/55", "text-copper", "text-brand-light", "text-aegean-light"]
 
 export function GroupArchitecture() {
   return (
     <section id="architecture" className="section-padding overflow-hidden bg-night text-white">
       <div className="container-wide">
-        <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-20">
+
+        {/* — Section label + headline — */}
+        <div className="mb-16 max-w-2xl">
+          <SectionLabel tone="dark">Group architecture</SectionLabel>
+          <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] leading-tight font-semibold">
+            Built to become a
+            <br />
+            <span className="italic text-brand-light">house of technology brands</span>
+          </h2>
+        </div>
+
+        {/* — Left / Right two-column — */}
+        <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24 lg:items-start">
+
+          {/* LEFT — Group hierarchy tree */}
           <div>
-            <SectionLabel tone="dark">Group architecture</SectionLabel>
-            <h2 className="font-display text-[clamp(2rem,5vw,3.75rem)] leading-tight font-semibold">
-              Built to become a
-              <br />
-              <span className="italic text-brand-light">house of technology brands</span>
-            </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70">
+            <p className="mb-10 max-w-lg text-base leading-relaxed text-white/60">
               ANTIKRA is designed as an expandable group. New companies can be
               created inside the ecosystem, but every brand still connects to
               the same governance, delivery discipline, research spine, and
               operating standard.
             </p>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {platformPillars.map((pillar) => (
-                <div
-                  key={pillar.id}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-5"
-                >
-                  <h3 className="font-display text-lg font-semibold text-white">
-                    {pillar.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/60">
-                    {pillar.description}
+            {/* Core node */}
+            <motion.div
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.48 }}
+            >
+              <div className="inline-flex items-center gap-4 rounded-xl border border-brand-light/20 bg-white/[0.06] px-5 py-4">
+                <span className="h-3 w-3 shrink-0 rounded-full bg-brand-light" />
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-brand-light/65">
+                    Parent company
+                  </p>
+                  <p className="mt-0.5 font-display text-xl font-semibold text-white">
+                    ANTIKRA Group Core
                   </p>
                 </div>
+              </div>
+            </motion.div>
+
+            {/* Stem + brand rows */}
+            <div className="relative ml-[1.6rem] mt-0 border-l border-white/10 pt-0">
+              {brands.map((brand, i) => (
+                <motion.div
+                  key={brand.id}
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.36, delay: i * 0.07 }}
+                  className="group relative flex items-start"
+                >
+                  {/* Horizontal branch line */}
+                  <div className="mt-[1.55rem] h-px w-5 shrink-0 bg-white/10" />
+
+                  <div className="flex-1 border-b border-white/[0.06] py-4 pl-4 transition-colors hover:bg-white/[0.03]">
+                    <div className="flex items-start justify-between gap-6">
+                      <div className="flex items-start gap-3">
+                        <span className={`mt-1 h-2 w-2 shrink-0 rounded-full ${brandDots[i]}`} />
+                        <div>
+                          <p className={`text-[10px] font-semibold uppercase tracking-[0.18em] ${brandTagColors[i]}`}>
+                            {brand.tagline}
+                          </p>
+                          <h3 className="mt-0.5 font-display text-lg font-semibold text-white">
+                            {brand.name.replace("ANTIKRA ", "")}
+                          </h3>
+                        </div>
+                      </div>
+                      <p className="shrink-0 pt-0.5 text-xs text-white/30">{brand.role}</p>
+                    </div>
+                    <p className="mt-2 pl-5 text-sm leading-relaxed text-white/45">
+                      {brand.description}
+                    </p>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="relative mx-auto aspect-square w-full max-w-[560px]"
-          >
-            <div className="absolute inset-10 rounded-full border border-brand-light/20" />
-            <div className="absolute inset-20 rounded-full border border-white/10" />
-            <div className="absolute inset-32 rounded-full border border-aegean-light/30" />
-            <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(196,165,116,0.18),transparent_62%)]" />
+          {/* RIGHT — Platform pillars: vertical stack */}
+          <div className="lg:pt-2">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/30 mb-8">
+              What every brand connects to
+            </p>
 
-            <div className="absolute inset-1/2 z-20 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-brand-light/30 bg-white text-center text-ink shadow-2xl">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-brand">
-                ANTIKRA
-              </span>
-              <span className="mt-1 font-display text-xl font-semibold leading-none">
-                Group Core
-              </span>
+            <div className="divide-y divide-white/8">
+              {platformPillars.map((pillar, i) => (
+                <motion.div
+                  key={pillar.id}
+                  initial={{ opacity: 0, x: 16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.38, delay: i * 0.09 }}
+                  className="py-7 first:pt-0"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/25">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-white">
+                        {pillar.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-white/50">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
+          </div>
+        </div>
 
-            {brands.map((brand, index) => (
-              <div
-                key={brand.id}
-                className={`absolute ${positions[index]} z-30 w-36 rounded-2xl border border-white/10 bg-white/[0.08] p-3 text-center shadow-xl backdrop-blur-md`}
+        {/* — Operating layers: clean 4-step timeline — */}
+        <div className="mt-20 border-t border-white/8 pt-20">
+          <p className="mb-14 text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-white/28">
+            How the group operates around a client engagement
+          </p>
+
+          <div className="relative grid gap-0 md:grid-cols-4">
+            {/* Full-width connector rule behind numbers */}
+            <div className="absolute left-0 right-0 top-[1.35rem] hidden h-px bg-white/8 md:block" />
+
+            {operatingLayers.map((layer, i) => (
+              <motion.div
+                key={layer.id}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.36, delay: i * 0.1 }}
+                className="relative px-6 first:pl-0 last:pr-0"
               >
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-light">
-                  {brand.role}
+                <span className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-brand/25 bg-night font-display text-sm font-semibold text-brand-light">
+                  {layer.label}
+                </span>
+                <h3 className="mt-5 font-display text-lg font-semibold text-white">
+                  {layer.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/50">
+                  {layer.description}
                 </p>
-                <p className="mt-1 font-display text-sm font-semibold leading-tight text-white">
-                  {brand.name.replace("ANTIKRA ", "")}
-                </p>
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
-        <div className="mt-16 grid gap-4 md:grid-cols-4">
-          {operatingLayers.map((layer) => (
-            <article
-              key={layer.id}
-              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
-            >
-              <p className="font-display text-2xl font-semibold text-brand-light">
-                {layer.label}
-              </p>
-              <h3 className="mt-4 font-display text-xl font-semibold text-white">
-                {layer.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/60">
-                {layer.description}
-              </p>
-            </article>
-          ))}
-        </div>
       </div>
     </section>
   )

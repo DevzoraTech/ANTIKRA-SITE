@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+    http://www.google.com/schemas/sitemap-image/1.1
+    http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+
+  <!-- ══════════════════════════════════════════════════
+       HOMEPAGE — Primary entry point
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://antikra.com/" />
+    <xhtml:link rel="alternate" hreflang="en-ke" href="https://antikra.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://antikra.com/" />
+    <image:image>
+      <image:loc>https://antikra.com/founder_ceo_mechanism_co.jpg</image:loc>
+      <image:title>ANTIKRA Group — Technology Group Company, Nairobi Kenya</image:title>
+      <image:caption>ANTIKRA Group is a family of six specialist technology companies building for the intelligent age.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       COMPANY OVERVIEW SECTIONS
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#about</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://antikra.com/#heritage</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://antikra.com/#architecture</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://antikra.com/#ecosystem</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       THE SIX BRANDS
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#brands</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- ANTIKRA Mechanism — Product Engineering -->
+  <url>
+    <loc>https://antikra.com/#antikra-mechanism</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ANTIKRA Cosmos — Cloud & Infrastructure -->
+  <url>
+    <loc>https://antikra.com/#antikra-cosmos</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ANTIKRA Orrery — AI & Predictive Systems -->
+  <url>
+    <loc>https://antikra.com/#antikra-orrery</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ANTIKRA Astra — Cybersecurity -->
+  <url>
+    <loc>https://antikra.com/#antikra-astra</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ANTIKRA Helios — Experience & Brand -->
+  <url>
+    <loc>https://antikra.com/#antikra-helios</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ANTIKRA Olympia — Ventures & Innovation -->
+  <url>
+    <loc>https://antikra.com/#antikra-olympia</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       CAPABILITIES / SERVICES
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#services</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Product & Platform Engineering -->
+  <url>
+    <loc>https://antikra.com/#precision-engineering</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Cloud & Infrastructure -->
+  <url>
+    <loc>https://antikra.com/#cloud-infrastructure</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- AI, Data & Automation -->
+  <url>
+    <loc>https://antikra.com/#ai-automation</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Cybersecurity & Trust -->
+  <url>
+    <loc>https://antikra.com/#cybersecurity</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Technology Ventures -->
+  <url>
+    <loc>https://antikra.com/#ventures</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       INDUSTRIES / SECTORS
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#industries</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Fintech & Banking -->
+  <url>
+    <loc>https://antikra.com/#fintech</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <!-- Healthcare Technology -->
+  <url>
+    <loc>https://antikra.com/#healthcare</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <!-- Logistics & Supply Chain -->
+  <url>
+    <loc>https://antikra.com/#logistics</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <!-- Education Technology -->
+  <url>
+    <loc>https://antikra.com/#education</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <!-- Real Estate Technology -->
+  <url>
+    <loc>https://antikra.com/#real-estate</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <!-- Retail Technology -->
+  <url>
+    <loc>https://antikra.com/#retail</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       WORKS / PORTFOLIO
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#works</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#faq</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#contact</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       ANTIKRA JOURNAL / INSIGHTS
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://antikra.com/#insights</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://antikra.com/founder_ceo_suit_portrait.webp</image:loc>
+      <image:title>ANTIKRA Journal — Notes on building technology companies</image:title>
+      <image:caption>Founder notes on architecture, brands, markets, and the operating systems behind new technology companies.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       KEYWORD / TOPIC ENTRY POINTS
+       (Additional signal entries to help crawlers map
+        the breadth of topics covered on the site)
+  ══════════════════════════════════════════════════ -->
+
+  <!-- ══════════════════════════════════════════════════
+       KEYWORD / GEO TOPIC ENTRY POINTS
+  ══════════════════════════════════════════════════ -->
+
+  <!-- Core identity -->
+  <url>
+    <loc>https://antikra.com/?topic=technology-group-company</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=technology-holding-company-africa</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=china-registered-technology-company</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=globally-registered-technology-group</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.68</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=china-africa-technology-company</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=pan-african-technology-group</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=antikythera-mechanism-inspiration</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=building-companies-intelligent-age</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Service topics -->
+  <url>
+    <loc>https://antikra.com/?topic=software-engineering-kenya</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=ai-company-nairobi</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=cybersecurity-company-kenya</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=venture-studio-africa</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=cloud-infrastructure-africa</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?topic=fintech-technology-kenya</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- East Africa geo -->
+  <url>
+    <loc>https://antikra.com/?region=kenya</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.62</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=uganda</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.62</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=tanzania</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=rwanda</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=ethiopia</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- West Africa geo -->
+  <url>
+    <loc>https://antikra.com/?region=nigeria</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.62</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=ghana</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=senegal</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.58</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=ivory-coast</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.58</priority>
+  </url>
+
+  <!-- Southern Africa geo -->
+  <url>
+    <loc>https://antikra.com/?region=south-africa</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.62</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=zambia</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.58</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=zimbabwe</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.58</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=mozambique</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.58</priority>
+  </url>
+
+  <!-- North Africa geo -->
+  <url>
+    <loc>https://antikra.com/?region=egypt</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=morocco</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=nigeria</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Registration + global geo -->
+  <url>
+    <loc>https://antikra.com/?region=china</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://antikra.com/?region=global</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.62</priority>
+  </url>
+
+</urlset>

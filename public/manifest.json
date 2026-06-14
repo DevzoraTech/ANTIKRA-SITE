@@ -1,0 +1,59 @@
+{
+  "name": "ANTIKRA Group",
+  "short_name": "ANTIKRA",
+  "description": "A family of six specialist technology companies building for the intelligent age — software, cloud, AI, cybersecurity, digital experience, and ventures. Headquartered in Nairobi, Kenya.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#9a7b4f",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "technology"],
+  "iarc_rating_id": "",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/founder_ceo_mechanism_co.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "label": "ANTIKRA Group — Technology Group Company"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "About ANTIKRA",
+      "short_name": "About",
+      "description": "Learn about ANTIKRA Group and our six foundation brands",
+      "url": "/#about"
+    },
+    {
+      "name": "Our Brands",
+      "short_name": "Brands",
+      "description": "Explore the six ANTIKRA specialist technology companies",
+      "url": "/#brands"
+    },
+    {
+      "name": "Capabilities",
+      "short_name": "Capabilities",
+      "description": "What ANTIKRA Group builds and operates",
+      "url": "/#services"
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Set the gears in motion — get in touch with ANTIKRA Group",
+      "url": "/#contact"
+    }
+  ]
+}

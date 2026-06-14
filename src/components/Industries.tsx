@@ -1,82 +1,60 @@
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { motion } from "framer-motion"
 import { SectionLabel } from "./SectionLabel"
 import { industries } from "../data/content"
 
 export function Industries() {
-  const [index, setIndex] = useState(0)
-  const perPage = 2
-  const maxIndex = Math.ceil(industries.length / perPage) - 1
-
-  const visible = industries.slice(index * perPage, index * perPage + perPage)
-
   return (
-    <section id="industries" className="section-padding bg-white">
+    <section id="industries" className="section-padding bg-surface">
       <div className="container-wide">
-        <div className="flex items-end justify-between gap-6">
+
+        {/* Header */}
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-20 mb-16 pb-12 border-b border-brand/10">
           <div>
             <SectionLabel>Sectors</SectionLabel>
-            <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-tight font-semibold text-ink">
+            <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.5rem)] leading-tight font-semibold text-ink">
               Sectors we
               <br />
               <span className="italic text-brand">calibrate for</span>
             </h2>
-            <p className="mt-4 max-w-lg text-base text-muted">
-              The ancient device tracked celestial bodies across the sky. We
-              apply the same precision to industries where complex systems,
-              data, and timing must align.
-            </p>
           </div>
-          <div className="hidden gap-2 sm:flex">
-            <button
-              type="button"
-              onClick={() => setIndex((i) => Math.max(0, i - 1))}
-              disabled={index === 0}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 disabled:opacity-30"
-              aria-label="Previous industries"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <button
-              type="button"
-              onClick={() => setIndex((i) => Math.min(maxIndex, i + 1))}
-              disabled={index === maxIndex}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 disabled:opacity-30"
-              aria-label="Next industries"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
+          <p className="text-base leading-relaxed text-muted border-l border-brand/15 pl-6">
+            The ancient device tracked celestial bodies with interlocking
+            precision. We apply the same discipline to industries where complex
+            systems, data velocity, and timing must align at scale.
+          </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <AnimatePresence mode="wait">
-            {visible.map((industry) => (
-              <motion.article
-                key={industry.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="group rounded-2xl border border-brand/10 bg-surface p-8 transition-shadow hover:shadow-md"
-              >
-                <h3 className="font-display text-xl font-bold text-ink">
+        {/* Industry rows */}
+        <div className="divide-y divide-brand/8">
+          {industries.map((industry, i) => (
+            <motion.article
+              key={industry.id}
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.38, delay: i * 0.06 }}
+              className="group grid gap-y-4 rounded-xl py-9 transition-colors hover:bg-white lg:grid-cols-[2fr_3fr] lg:gap-x-16 lg:px-6 lg:py-11"
+            >
+              {/* LEFT — number + title */}
+              <div className="flex items-start gap-5">
+                <span className="shrink-0 pt-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand/45">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-display text-2xl font-semibold leading-tight text-ink md:text-3xl">
                   {industry.title}
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted">
+              </div>
+
+              {/* RIGHT — description */}
+              <div className="lg:border-l lg:border-brand/8 lg:pl-10">
+                <p className="text-base leading-relaxed text-muted">
                   {industry.description}
                 </p>
-                <button
-                  type="button"
-                  className="mt-6 text-sm font-semibold text-brand transition-colors hover:text-brand-dark"
-                >
-                  View industry -&gt;
-                </button>
-              </motion.article>
-            ))}
-          </AnimatePresence>
+              </div>
+            </motion.article>
+          ))}
         </div>
+
       </div>
     </section>
   )
