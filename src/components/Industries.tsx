@@ -17,7 +17,7 @@ export function Industries() {
               <span className="italic text-brand">calibrate for</span>
             </h2>
           </div>
-          <p className="text-base leading-relaxed text-muted border-l border-brand/15 pl-6">
+          <p className="text-base leading-relaxed text-muted lg:border-l lg:border-brand/15 lg:pl-6">
             The ancient device tracked celestial bodies with interlocking
             precision. We apply the same discipline to industries where complex
             systems, data velocity, and timing must align at scale.

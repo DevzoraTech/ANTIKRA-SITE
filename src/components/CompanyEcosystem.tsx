@@ -59,7 +59,7 @@ export function CompanyEcosystem() {
               <span className="italic text-brand">operated like one system.</span>
             </h2>
           </div>
-          <p className="border-l border-brand/15 pl-6 text-base leading-relaxed text-muted">
+          <p className="text-base leading-relaxed text-muted lg:border-l lg:border-brand/15 lg:pl-6">
             ANTIKRA is not trying to look like one agency with many services. It
             is designed as a parent company that builds, owns, operates, and
             connects specialist technology companies — each with a practical job
@@ -71,7 +71,7 @@ export function CompanyEcosystem() {
         <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
 
           {/* LEFT — featured large card */}
-          <article className="group relative min-h-[560px] overflow-hidden rounded-[1.65rem] bg-ink">
+          <article className="group relative min-h-[420px] overflow-hidden rounded-[1.65rem] bg-ink lg:min-h-[560px]">
             <img
               src={ecosystemCards[0].image}
               alt=""

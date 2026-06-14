@@ -12,7 +12,7 @@ export function Insights() {
         {/* — Masthead header — */}
         <div className="mb-12 border-b border-ink/8 pb-10">
           {/* Top bar: journal label + issue + open link */}
-          <div className="flex items-center justify-between gap-6 mb-8">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 mb-8">
             <div className="flex items-center gap-5">
               <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-ion">
                 ANTIKRA Journal
@@ -52,7 +52,7 @@ export function Insights() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-night/92 via-night/30 to-transparent" />
 
-            <div className="relative flex min-h-[460px] flex-col justify-end p-8 md:p-10">
+            <div className="relative flex min-h-[340px] flex-col justify-end p-6 md:min-h-[460px] md:p-10">
               <div className="flex items-center gap-3 mb-5">
                 <span className="rounded-full border border-white/15 bg-white/8 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/75 backdrop-blur-sm">
                   Featured

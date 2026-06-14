@@ -41,7 +41,7 @@ export function SignalLayer() {
             {disciplines.map((d, i) => (
               <div
                 key={d.label}
-                className="bg-ink px-5 py-6 transition-colors hover:bg-white/[0.03]"
+                className={`bg-ink px-5 py-6 transition-colors hover:bg-white/[0.03] ${i === disciplines.length - 1 ? "col-span-2 sm:col-span-1" : ""}`}
               >
                 <p className={`font-display text-xl font-semibold leading-none ${i === 0 ? "text-brand-light" : "text-white"}`}>
                   {d.label}

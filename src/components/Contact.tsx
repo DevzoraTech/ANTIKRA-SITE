@@ -28,7 +28,7 @@ export function Contact() {
               <span className="italic text-brand">in motion</span>
             </h2>
           </div>
-          <p className="text-base leading-relaxed text-muted border-l border-brand/15 pl-6">
+          <p className="text-base leading-relaxed text-muted lg:border-l lg:border-brand/15 lg:pl-6">
             Tell us what you are building, fixing, launching, or trying to
             understand. The group will identify the right brand mix and turn the
             ambition into a practical path forward.

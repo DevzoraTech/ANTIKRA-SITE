@@ -147,7 +147,7 @@ export function GlobalPresence() {
         <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
 
           {/* LEFT — Real SVG world map */}
-          <div className="relative overflow-hidden rounded-2xl border border-white/8 bg-[#0b1118]">
+          <div className="relative min-h-[300px] overflow-hidden rounded-2xl border border-white/8 bg-[#0b1118] sm:min-h-[380px] lg:min-h-0">
             <ComposableMap
               projection="geoMercator"
               projectionConfig={{ center: [62, 8], scale: 195 }}
@@ -270,7 +270,7 @@ export function GlobalPresence() {
               {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
-                  className="bg-night px-6 py-5"
+                  className="bg-night px-4 py-4 sm:px-6 sm:py-5"
                   custom={i}
                   initial="hidden"
                   whileInView="show"

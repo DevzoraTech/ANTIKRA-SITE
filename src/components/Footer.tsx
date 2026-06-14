@@ -30,7 +30,7 @@ export function Footer() {
             </div>
             <a
               href="#contact"
-              className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-brand px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+              className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-brand px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-brand-dark lg:w-auto lg:justify-start"
             >
               Get in touch
               <ArrowUpRight className="h-4 w-4" />

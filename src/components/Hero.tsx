@@ -54,8 +54,8 @@ export function Hero() {
               variants={fadeUp}
               className="mt-6 max-w-[760px] font-display text-[clamp(2.25rem,4.4vw,4.45rem)] leading-[0.96] font-semibold text-ink"
             >
-              <span className="block whitespace-nowrap">Building companies</span>
-              <span className="block whitespace-nowrap">
+              <span className="block">Building companies</span>
+              <span className="block">
                 for the <span className="text-brand">intelligent age.</span>
               </span>
             </motion.h1>
@@ -77,7 +77,7 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="mt-8 flex items-center gap-3"
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
             >
               <Button
                 size="lg"

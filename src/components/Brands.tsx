@@ -26,7 +26,7 @@ export function Brands() {
               <span className="italic text-brand">foundation brands.</span>
             </h2>
           </div>
-          <p className="text-base leading-relaxed text-muted border-l border-brand/15 pl-6">
+          <p className="text-base leading-relaxed text-muted lg:border-l lg:border-brand/15 lg:pl-6">
             These are the first gears in the ANTIKRA group architecture. Each
             operates as a specialist company, but the greater value comes when
             they combine around products, platforms, ventures, and transformation

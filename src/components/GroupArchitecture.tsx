@@ -79,7 +79,7 @@ export function GroupArchitecture() {
                           </h3>
                         </div>
                       </div>
-                      <p className="shrink-0 pt-0.5 text-xs text-white/30">{brand.role}</p>
+                      <p className="hidden shrink-0 pt-0.5 text-xs text-white/30 sm:block">{brand.role}</p>
                     </div>
                     <p className="mt-2 pl-5 text-sm leading-relaxed text-white/45">
                       {brand.description}
@@ -131,7 +131,7 @@ export function GroupArchitecture() {
             How the group operates around a client engagement
           </p>
 
-          <div className="relative grid gap-0 md:grid-cols-4">
+          <div className="relative grid gap-0 divide-y divide-white/8 md:divide-y-0 md:grid-cols-4">
             {/* Full-width connector rule behind numbers */}
             <div className="absolute left-0 right-0 top-[1.35rem] hidden h-px bg-white/8 md:block" />
 
@@ -142,7 +142,7 @@ export function GroupArchitecture() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.36, delay: i * 0.1 }}
-                className="relative px-6 first:pl-0 last:pr-0"
+                className="relative py-8 first:pt-0 md:px-6 md:py-0 md:first:pl-0 md:last:pr-0"
               >
                 <span className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-brand/25 bg-night font-display text-sm font-semibold text-brand-light">
                   {layer.label}

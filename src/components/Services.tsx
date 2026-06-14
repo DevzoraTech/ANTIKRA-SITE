@@ -25,7 +25,7 @@ export function Services() {
               <span className="italic text-brand">serious technology work</span>
             </h2>
           </div>
-          <p className="text-base leading-relaxed text-muted border-l border-brand/15 pl-6">
+          <p className="text-base leading-relaxed text-muted lg:border-l lg:border-brand/15 lg:pl-6">
             The group can deliver one focused capability or assemble a cross-brand
             team around complex work. Each capability has a lead brand owner, but no
             discipline operates in isolation — engineering, cloud, AI, security, and
