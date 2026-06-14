@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --color-brand: #9a7b4f;
+  --color-brand-dark: #7a6038;
+  --color-brand-light: #c4a574;
+  --color-ink: #1a1a1a;
+  --color-muted: #5c5c5c;
+  --color-surface: #faf9f7;
+  --color-parchment: #f3efe8;
+  --color-bronze: #8b7355;
+  --color-aegean: #1e4d5c;
+  --color-aegean-light: #2a6578;
+  --color-aegean-muted: #e8f0f2;
+  --color-copper: #b87333;
+  --color-patina: #5a7a6a;
+  --color-ion: #3157d5;
+  --color-ion-muted: #edf1ff;
+  --color-night: #0f1923;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-brand) 25%, transparent);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1.5px currentColor;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .font-display-sans {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .hero-watermark {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%239a7b4f' stroke-width='0.6' opacity='0.12'%3E%3Ccircle cx='60' cy='60' r='48'/%3E%3Ccircle cx='60' cy='60' r='36'/%3E%3Ccircle cx='60' cy='60' r='24'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Cpath d='M60 12v96M12 60h96M25 25l70 70M95 25L25 95'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    mask-image: radial-gradient(ellipse 80% 70% at 55% 45%, black 10%, transparent 70%);
+  }
+
+  .section-padding {
+    @apply px-5 py-20 md:px-10 md:py-28 lg:px-16 lg:py-32;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl;
+  }
+
+  .bronze-gradient {
+    background: linear-gradient(135deg, #c4a574 0%, #9a7b4f 50%, #7a6038 100%);
+  }
+
+  .aegean-gradient {
+    background: linear-gradient(135deg, #2a6578 0%, #1e4d5c 50%, #0f1923 100%);
+  }
+
+  .image-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(15, 25, 35, 0.88) 0%,
+      rgba(15, 25, 35, 0.35) 45%,
+      rgba(15, 25, 35, 0.05) 100%
+    );
+  }
+
+  .image-overlay-light {
+    background: linear-gradient(
+      145deg,
+      rgba(30, 77, 92, 0.15) 0%,
+      rgba(154, 123, 79, 0.08) 100%
+    );
+  }
+
+  @keyframes logo-gear-cw {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes logo-gear-ccw {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}
