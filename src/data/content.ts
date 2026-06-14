@@ -1,3 +1,9 @@
+import antikraStudioBg from "../assets/antikra-studio-bg.webp"
+import ecosystemInfrastructure from "../assets/ecosystem-infrastructure.webp"
+import ecosystemIntelligence from "../assets/ecosystem-intelligence.webp"
+import ecosystemProduct from "../assets/ecosystem-product.webp"
+import ecosystemVenture from "../assets/ecosystem-venture.webp"
+
 export interface ProofPoint {
   id: string
   title: string
@@ -336,7 +342,7 @@ export const caseStudies: CaseStudy[] = [
       "A multi-currency banking platform blueprint with real-time processing, security controls, and AI-assisted fraud workflows.",
     category: "Fintech",
     brand: "Mechanism / Orrery / Astra",
-    image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&q=80",
+    image: ecosystemProduct,
     featured: true,
   },
   {
@@ -346,7 +352,7 @@ export const caseStudies: CaseStudy[] = [
       "Video consultations, EHR integration, clinical scheduling, and patient communication for a national care network.",
     category: "Healthcare",
     brand: "Mechanism / Helios",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80",
+    image: antikraStudioBg,
   },
   {
     id: "logistics-suite",
@@ -355,7 +361,7 @@ export const caseStudies: CaseStudy[] = [
       "Real-time GPS, dispatch tools, route analytics, and operational dashboards for distributed logistics teams.",
     category: "Logistics",
     brand: "Cosmos / Mechanism",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80",
+    image: ecosystemInfrastructure,
   },
   {
     id: "ai-analytics",
@@ -364,7 +370,7 @@ export const caseStudies: CaseStudy[] = [
       "A decision-support layer that turns market, customer, and operational data into forecasts and recommendations.",
     category: "AI & Data",
     brand: "Orrery",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
+    image: ecosystemIntelligence,
   },
   {
     id: "edtech-platform",
@@ -373,7 +379,7 @@ export const caseStudies: CaseStudy[] = [
       "Learning paths, live classrooms, assessments, and scalable infrastructure for high-volume education delivery.",
     category: "Education",
     brand: "Mechanism / Helios",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da280a0?w=900&q=80",
+    image: ecosystemVenture,
   },
 ]
 

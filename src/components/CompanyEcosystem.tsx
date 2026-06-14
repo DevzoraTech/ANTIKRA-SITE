@@ -1,8 +1,8 @@
 import { ArrowUpRight } from "lucide-react"
-import ecosystemProduct from "../assets/ecosystem-product.png"
-import ecosystemInfrastructure from "../assets/ecosystem-infrastructure.png"
-import ecosystemIntelligence from "../assets/ecosystem-intelligence.png"
-import ecosystemVenture from "../assets/ecosystem-venture.png"
+import ecosystemProduct from "../assets/ecosystem-product.webp"
+import ecosystemInfrastructure from "../assets/ecosystem-infrastructure.webp"
+import ecosystemIntelligence from "../assets/ecosystem-intelligence.webp"
+import ecosystemVenture from "../assets/ecosystem-venture.webp"
 
 const ecosystemCards = [
   {
@@ -85,6 +85,7 @@ export function CompanyEcosystem() {
               alt=""
               className="absolute inset-0 h-full w-full object-cover opacity-75 transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,25,35,0.04)_0%,rgba(15,25,35,0.42)_48%,rgba(15,25,35,0.9)_100%)]" />
             <div className="absolute left-6 top-6 flex items-center gap-3">
@@ -125,6 +126,7 @@ export function CompanyEcosystem() {
                     alt=""
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
                   <span
@@ -175,6 +177,7 @@ export function CompanyEcosystem() {
                   alt=""
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#fffaf2]/15" />
               </div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { Button } from "./Button"
 import { MechanismCanvas } from "./MechanismCanvas"
 import { heroStats } from "../data/navigation"
-import antikraStudioBg from "../assets/antikra-studio-bg.png"
+import antikraStudioBg from "../assets/antikra-studio-bg.webp"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -23,6 +23,7 @@ export function Hero() {
         src={antikraStudioBg}
         alt=""
         aria-hidden="true"
+        decoding="async"
         className="pointer-events-none absolute right-0 top-0 hidden h-full w-[64%] object-cover object-right opacity-[0.52] [mask-image:linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.55)_18%,black_34%,black_100%)] lg:block"
       />
       <div className="pointer-events-none absolute inset-y-0 right-[42%] hidden w-[22%] bg-gradient-to-r from-white via-white/45 to-transparent lg:block" />

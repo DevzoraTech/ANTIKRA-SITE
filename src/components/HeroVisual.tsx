@@ -20,6 +20,7 @@ export function HeroVisual() {
           alt="The Antikythera mechanism, a 2,000-year-old bronze astronomical computer"
           className="aspect-[4/5] w-full object-cover object-center"
           loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 z-20 bg-gradient-to-t from-night/75 via-night/20 to-transparent" />
         <div className="absolute right-4 bottom-4 left-4 z-30 flex items-end justify-between gap-4">
@@ -48,6 +49,7 @@ export function HeroVisual() {
           alt="Modern precision engineering"
           className="aspect-square w-full object-cover"
           loading="eager"
+          decoding="async"
         />
       </motion.div>
 
@@ -62,6 +64,7 @@ export function HeroVisual() {
           alt="Aegean Sea, origin of the Antikythera discovery"
           className="mb-3 aspect-video w-full rounded-lg object-cover opacity-90"
           loading="lazy"
+          decoding="async"
         />
         <p className="text-[10px] font-semibold uppercase tracking-wider text-brand-light">
           Antikythera, Greece

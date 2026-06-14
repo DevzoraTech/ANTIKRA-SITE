@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react"
 import { insights } from "../data/content"
-import antikraStudioBg from "../assets/antikra-studio-bg.png"
-import ecosystemIntelligence from "../assets/ecosystem-intelligence.png"
+import antikraStudioBg from "../assets/antikra-studio-bg.webp"
+import ecosystemIntelligence from "../assets/ecosystem-intelligence.webp"
 
 export function Insights() {
   const [featured, ...readingList] = insights
@@ -39,6 +39,7 @@ export function Insights() {
                 alt=""
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/78 via-ink/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
@@ -59,10 +60,11 @@ export function Insights() {
             <article className="overflow-hidden rounded-[1.6rem] border border-ion/15 bg-ion-muted/55 p-6">
               <div className="grid gap-5 sm:grid-cols-[150px_1fr] sm:items-center">
                 <img
-                  src="/founder_ceo_suit_portrait.png"
+                  src="/founder_ceo_suit_portrait.webp"
                   alt="Founder portrait"
                   className="aspect-[4/5] w-full rounded-2xl object-cover object-top shadow-sm"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-ion">
@@ -90,6 +92,7 @@ export function Insights() {
                   alt=""
                   className="h-14 w-20 rounded-xl object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="mt-5 divide-y divide-black/5">
