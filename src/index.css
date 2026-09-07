@@ -107,4 +107,95 @@
       transform: rotate(-360deg);
     }
   }
+
+  @keyframes home-hero-image-settle {
+    from {
+      transform: scale(1.045);
+      opacity: 0.72;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes home-hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes home-hero-rule {
+    from {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    to {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  .home-hero-image {
+    animation: home-hero-image-settle 1.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    transform-origin: 58% 42%;
+    will-change: transform, opacity;
+  }
+
+  .home-hero-copy > * {
+    animation: home-hero-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .home-hero-copy > *:nth-child(1) {
+    animation-delay: 0.12s;
+  }
+
+  .home-hero-copy > *:nth-child(2) {
+    animation-delay: 0.24s;
+  }
+
+  .home-hero-copy > *:nth-child(3) {
+    animation-delay: 0.38s;
+    transform-origin: left center;
+    animation-name: home-hero-rule;
+  }
+
+  .home-hero-copy > *:nth-child(4) {
+    animation-delay: 0.46s;
+  }
+
+  .home-hero-copy > *:nth-child(5) {
+    animation-delay: 0.58s;
+  }
+
+  .home-hero-copy > *:nth-child(6) {
+    animation-delay: 0.7s;
+  }
+
+  .home-hero-cta-primary:hover svg,
+  .home-hero-cta-secondary:hover svg {
+    transform: translateX(3px);
+  }
+
+  .home-hero-cta-primary svg,
+  .home-hero-cta-secondary svg {
+    transition: transform 0.25s ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-hero-image,
+    .home-hero-copy > * {
+      animation: none;
+    }
+
+    .home-hero-cta-primary:hover svg,
+    .home-hero-cta-secondary:hover svg {
+      transform: none;
+    }
+  }
 }

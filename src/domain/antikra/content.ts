@@ -1,0 +1,132 @@
+import type {
+  CompanyCard,
+  SystemStep,
+  WorkShowcase,
+} from "./models"
+
+export const companyCards: CompanyCard[] = [
+  {
+    id: "mechanism",
+    number: "01",
+    name: "Mechanism",
+    discipline: "Product Engineering",
+    description: "We design, build and ship digital products that solve real business problems.",
+    accent: "bronze",
+    icon: "box",
+  },
+  {
+    id: "cosmos",
+    number: "02",
+    name: "Cosmos",
+    discipline: "Cloud & Infrastructure",
+    description: "We build and operate secure, scalable and resilient cloud infrastructure.",
+    accent: "green",
+    icon: "cloud",
+  },
+  {
+    id: "orrery",
+    number: "03",
+    name: "Orrery",
+    discipline: "AI & Data",
+    description: "We transform data into intelligence and build AI systems that create measurable impact.",
+    accent: "violet",
+    icon: "orbit",
+  },
+  {
+    id: "astra",
+    number: "04",
+    name: "Astra",
+    discipline: "Cybersecurity",
+    description: "We protect systems, data and people with proactive and adaptive security.",
+    accent: "blue",
+    icon: "shield",
+  },
+  {
+    id: "helios",
+    number: "05",
+    name: "Helios",
+    discipline: "Experience & Design",
+    description: "We craft experiences and brands that connect, engage and endure.",
+    accent: "coral",
+    icon: "sun",
+  },
+  {
+    id: "olympia",
+    number: "06",
+    name: "Olympia",
+    discipline: "Ventures",
+    description: "We build and back ventures that shape the future through technology.",
+    accent: "gold",
+    icon: "venture",
+  },
+]
+
+export const systemSteps: SystemStep[] = [
+  {
+    id: "strategy",
+    title: "Strategy & Discovery",
+    description: "Understanding the problem and defining the right direction.",
+    owner: "Helios",
+    icon: "target",
+    accent: "coral",
+  },
+  {
+    id: "design",
+    title: "Design & Experience",
+    description: "Designing experiences and solutions that create value.",
+    owner: "Helios",
+    icon: "pencil",
+    accent: "coral",
+  },
+  {
+    id: "engineering",
+    title: "Engineering & Product Build",
+    description: "Building robust, scalable and reliable digital products.",
+    owner: "Mechanism",
+    icon: "code",
+    accent: "bronze",
+  },
+  {
+    id: "operations",
+    title: "Infrastructure & Operations",
+    description: "Deploying and operating infrastructure that performs and scales.",
+    owner: "Cosmos",
+    icon: "cloud",
+    accent: "green",
+  },
+  {
+    id: "intelligence",
+    title: "Intelligence & Security",
+    description: "Applying intelligence and protecting what matters.",
+    owner: "Orrery + Astra",
+    icon: "brain",
+    accent: "violet",
+  },
+]
+
+export const groupWork: WorkShowcase[] = [
+  {
+    id: "rembeh",
+    title: "Rembeh",
+    description: "Financial operations infrastructure for lending businesses.",
+    contributors: ["Mechanism", "Cosmos", "Orrery", "Astra"],
+    imageKey: "product",
+    accent: "green",
+  },
+  {
+    id: "carmie",
+    title: "Carmie",
+    description: "Infrastructure for the automotive service economy.",
+    contributors: ["Mechanism", "Cosmos", "Helios", "Astra"],
+    imageKey: "infrastructure",
+    accent: "blue",
+  },
+  {
+    id: "grid-insights",
+    title: "Grid Insights",
+    description: "AI-powered analytics platform for energy infrastructure.",
+    contributors: ["Orrery", "Cosmos", "Astra"],
+    imageKey: "venture",
+    accent: "violet",
+  },
+]
