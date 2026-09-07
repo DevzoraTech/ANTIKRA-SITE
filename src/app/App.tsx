@@ -25,9 +25,11 @@ import { ResearchPage } from "../pages/research/ResearchPage"
 import { ResearchDetailPage } from "../pages/research/ResearchDetailPage"
 import { WorkPage, WorkDetailPage } from "../pages/work/WorkPage"
 import { ConsoleApp } from "../pages/console/ConsoleApp"
+import { useDocumentSeo } from "../shared/seo"
 
 export default function App() {
   const pathname = window.location.pathname
+  useDocumentSeo(pathname)
 
   if (pathname === "/") {
     return <HomePage />

@@ -18,7 +18,7 @@ export function HomeHeroSection() {
       <div className="mx-auto flex min-h-[520px] w-full max-w-[1500px] items-center px-8 py-14 md:min-h-[575px] md:px-12 xl:px-[72px]">
         <div className="home-hero-copy w-full max-w-[505px]">
           <p className="font-display-sans text-[0.64rem] font-extrabold uppercase tracking-[0.2em] text-[#a1742e]">
-            Technology Group&nbsp;&nbsp;•&nbsp;&nbsp;Kampala
+            Global Technology Group&nbsp;&nbsp;•&nbsp;&nbsp;Kampala
           </p>
           <h1 className="mt-5 font-display text-[4.3rem] font-semibold leading-[0.9] tracking-[-0.035em] text-[#16110f] md:text-[5.35rem] xl:text-[6.3rem]">
             Technology,
@@ -55,7 +55,7 @@ export function HomeHeroSection() {
             </span>
             <span className="h-3 w-px bg-black/25" />
             <span className="normal-case tracking-[0.02em]">
-              Building from Africa for complex markets.
+              Global reach. Operations including Kampala, Uganda.
             </span>
           </div>
         </div>

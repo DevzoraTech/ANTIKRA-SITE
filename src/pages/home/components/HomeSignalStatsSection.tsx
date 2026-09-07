@@ -2,7 +2,7 @@ const signals = [
   { value: "06", label: "Specialist companies", detail: "one integrated system" },
   { value: "02", label: "Products in operation", detail: "Rembeh · Carmie" },
   { value: "06", label: "Solution disciplines", detail: "clients can engage" },
-  { value: "Kampala", label: "Operating base", detail: "built for complex markets" },
+  { value: "Global", label: "Operating footprint", detail: "including Kampala, Uganda" },
 ]
 
 export function HomeSignalStatsSection() {

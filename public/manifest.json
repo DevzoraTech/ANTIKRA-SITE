@@ -1,17 +1,16 @@
 {
-  "name": "ANTIKRA Group",
+  "name": "ANTIKRA",
   "short_name": "ANTIKRA",
-  "description": "A family of six specialist technology companies building for the intelligent age — software, cloud, AI, cybersecurity, digital experience, and ventures. Headquartered in Nairobi, Kenya.",
+  "description": "Global technology group building products, infrastructure and companies for complex environments.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#ffffff",
-  "theme_color": "#9a7b4f",
+  "background_color": "#f8f2e9",
+  "theme_color": "#9a6d23",
   "lang": "en",
   "dir": "ltr",
   "categories": ["business", "productivity", "technology"],
-  "iarc_rating_id": "",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -20,40 +19,30 @@
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/founder_ceo_mechanism_co.jpg",
-      "sizes": "1200x630",
-      "type": "image/jpeg",
-      "label": "ANTIKRA Group — Technology Group Company"
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false,
   "shortcuts": [
     {
-      "name": "About ANTIKRA",
-      "short_name": "About",
-      "description": "Learn about ANTIKRA Group and our six foundation brands",
-      "url": "/#about"
+      "name": "Companies",
+      "short_name": "Companies",
+      "description": "Six specialist ANTIKRA companies",
+      "url": "/companies"
     },
     {
-      "name": "Our Brands",
-      "short_name": "Brands",
-      "description": "Explore the six ANTIKRA specialist technology companies",
-      "url": "/#brands"
+      "name": "Products",
+      "short_name": "Products",
+      "description": "Rembeh, Carmie and ANTIKRA products",
+      "url": "/products"
     },
     {
-      "name": "Capabilities",
-      "short_name": "Capabilities",
-      "description": "What ANTIKRA Group builds and operates",
-      "url": "/#services"
+      "name": "Solutions",
+      "short_name": "Solutions",
+      "description": "Engage ANTIKRA capabilities",
+      "url": "/solutions"
     },
     {
       "name": "Contact",
       "short_name": "Contact",
-      "description": "Set the gears in motion — get in touch with ANTIKRA Group",
-      "url": "/#contact"
+      "description": "Start an enquiry with ANTIKRA",
+      "url": "/company/contact"
     }
   ]
 }
