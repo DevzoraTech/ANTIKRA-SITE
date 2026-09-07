@@ -9,7 +9,7 @@ export function ResearchDetailPage({ publication }: { publication: ResearchPubli
     [
       publication.summary,
       "ANTIKRA Research studies the technologies, systems and operating environments behind the products and companies we build.",
-      "For collaboration or related materials, contact research@antikra.com.",
+      "For collaboration or related materials, start an enquiry through Contact.",
     ]
 
   return (

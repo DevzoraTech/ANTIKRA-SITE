@@ -24,7 +24,7 @@ import { ContactPage } from "../pages/company/ContactPage"
 import { ResearchPage } from "../pages/research/ResearchPage"
 import { ResearchDetailPage } from "../pages/research/ResearchDetailPage"
 import { WorkPage, WorkDetailPage } from "../pages/work/WorkPage"
-import { ConsoleGatePage } from "../pages/console/ConsoleGatePage"
+import { ConsoleApp } from "../pages/console/ConsoleApp"
 
 export default function App() {
   const pathname = window.location.pathname
@@ -34,11 +34,7 @@ export default function App() {
   }
 
   if (pathname === "/console" || pathname.startsWith("/console/")) {
-    return (
-      <SiteLayout>
-        <ConsoleGatePage />
-      </SiteLayout>
-    )
+    return <ConsoleApp />
   }
 
   if (pathname === "/company" || pathname === "/company/") {

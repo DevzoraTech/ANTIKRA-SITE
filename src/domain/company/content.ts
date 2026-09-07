@@ -98,7 +98,7 @@ export const companyAbout: CompanyAboutContent = {
     { label: "Legal entity", value: "ANTIKRA Group" },
     { label: "Headquarters", value: "Kampala, Uganda" },
     { label: "Founded", value: "2024" },
-    { label: "Contact", value: "hello@antikra.com" },
+    { label: "Contact", value: "Start an enquiry" },
   ],
   careersCta: {
     title: "Build consequential technology with us.",

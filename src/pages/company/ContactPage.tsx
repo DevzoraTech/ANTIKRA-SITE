@@ -5,6 +5,7 @@ import {
   contactProcess,
   directContacts,
 } from "../../domain/company"
+import { openInquiry } from "../../shared/inquiry"
 
 const accentBorder = {
   bronze: "border-[#9a6d23]",
@@ -36,8 +37,8 @@ export function ContactPage() {
     const email = String(data.get("email") ?? "")
     const organization = String(data.get("organization") ?? "")
     const message = String(data.get("message") ?? "")
-    const subject = encodeURIComponent(`ANTIKRA enquiry · ${intent.title}`)
-    const body = encodeURIComponent(
+    openInquiry(
+      `ANTIKRA enquiry · ${intent.title}`,
       [
         `Intent: ${intent.title}`,
         `Name: ${name}`,
@@ -47,7 +48,6 @@ export function ContactPage() {
         message,
       ].join("\n"),
     )
-    window.location.href = `mailto:hello@antikra.com?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 
@@ -204,12 +204,24 @@ export function ContactPage() {
                       <p className="font-display-sans text-[0.55rem] font-extrabold uppercase tracking-[0.12em] text-[#15110f]/45">
                         {item.label}
                       </p>
-                      <a
-                        href={item.href ?? `mailto:${item.email}`}
-                        className="mt-1 inline-block text-[0.9rem] text-[#16110f] underline-offset-4 hover:underline"
-                      >
-                        {item.href ? "Explore careers" : item.email}
-                      </a>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          className="mt-1 inline-block text-[0.9rem] text-[#16110f] underline-offset-4 hover:underline"
+                        >
+                          Explore careers
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            openInquiry(`ANTIKRA · ${item.label}`, `Regarding: ${item.label}\n\n`)
+                          }
+                          className="mt-1 text-[0.9rem] text-[#16110f] underline-offset-4 hover:underline"
+                        >
+                          Send enquiry
+                        </button>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -247,13 +259,19 @@ export function ContactPage() {
               Security
             </p>
             <h3 className="mt-3 font-display text-[1.5rem] font-semibold">Found a security issue?</h3>
-            <a
-              href="mailto:security@antikra.com"
+            <button
+              type="button"
+              onClick={() =>
+                openInquiry(
+                  "ANTIKRA security report",
+                  "I would like to report a security issue.\n\nDetails:\n",
+                )
+              }
               className="mt-3 inline-flex items-center gap-2 text-[0.86rem] font-semibold text-[#174783]"
             >
-              Report via security@antikra.com
+              Report a security issue
               <ArrowRight className="h-3.5 w-3.5" />
-            </a>
+            </button>
           </div>
         </div>
       </section>

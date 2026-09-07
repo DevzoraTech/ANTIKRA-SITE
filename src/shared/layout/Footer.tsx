@@ -1,4 +1,5 @@
 import { Linkedin, Mail, MapPin, Twitter } from "lucide-react"
+import { openInquiry } from "../inquiry"
 
 const columns = [
   {
@@ -104,13 +105,14 @@ export function Footer() {
               >
                 <Twitter className="h-4 w-4" strokeWidth={1.5} />
               </a>
-              <a
-                href="mailto:hello@antikra.com"
+              <button
+                type="button"
+                onClick={() => openInquiry("ANTIKRA enquiry")}
                 aria-label="Email"
                 className="transition-colors hover:text-white"
               >
                 <Mail className="h-4 w-4" strokeWidth={1.5} />
-              </a>
+              </button>
             </div>
           </div>
         </div>
