@@ -1,5 +1,6 @@
 import { Linkedin, Mail, MapPin, Twitter } from "lucide-react"
 import { openInquiry } from "../inquiry"
+import { reopenCookiePreferences } from "../ui/CookieConsentBanner"
 
 const columns = [
   {
@@ -7,7 +8,7 @@ const columns = [
     links: [
       ["Our Companies", "/companies"],
       ["Ventures", "/companies/olympia"],
-      ["Governance", "/company"],
+      ["Company", "/company"],
     ],
   },
   {
@@ -40,7 +41,10 @@ const columns = [
   },
   {
     title: "Insights",
-    links: [["Research", "/research"]],
+    links: [
+      ["Research", "/research"],
+      ["Work", "/work"],
+    ],
   },
 ]
 
@@ -56,8 +60,8 @@ export function Footer() {
             <p className="mt-1 font-display-sans text-[0.42rem] font-black uppercase tracking-[0.5em] text-white/52">
               Group
             </p>
-            <p className="mt-5 max-w-[205px] text-[0.68rem] leading-[1.55] text-white/45">
-              Technology group building products, infrastructure and companies
+            <p className="mt-5 max-w-[220px] text-[0.68rem] leading-[1.55] text-white/45">
+              Global technology group building products, infrastructure and companies
               for complex environments.
             </p>
           </div>
@@ -84,11 +88,11 @@ export function Footer() {
 
           <div>
             <h3 className="font-display-sans text-[0.54rem] font-extrabold uppercase tracking-[0.18em] text-[#a97b32]">
-              Kampala, Uganda
+              Global · Kampala
             </h3>
             <p className="mt-4 flex items-center gap-2 text-[0.66rem] text-white/48">
               <MapPin className="h-3.5 w-3.5" strokeWidth={1.5} />
-              Building from Africa
+              Operations including Kampala, Uganda
             </p>
             <div className="mt-5 flex gap-4 text-white/54">
               <a
@@ -114,18 +118,31 @@ export function Footer() {
                 <Mail className="h-4 w-4" strokeWidth={1.5} />
               </button>
             </div>
+            <a
+              href="/company/contact"
+              className="mt-6 inline-flex h-9 items-center bg-[#a8711a] px-4 font-display-sans text-[0.55rem] font-extrabold uppercase tracking-[0.1em] transition-colors hover:bg-[#8f5f14]"
+            >
+              Start a conversation
+            </a>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-5 text-[0.62rem] text-white/35 md:flex-row md:items-center md:justify-between">
           <p>© 2026 ANTIKRA Group. All rights reserved.</p>
-          <div className="flex gap-7">
+          <div className="flex flex-wrap gap-x-7 gap-y-2">
             <a href="/privacy" className="transition-colors hover:text-white">
               Privacy Policy
             </a>
             <a href="/terms" className="transition-colors hover:text-white">
               Terms of Use
             </a>
+            <button
+              type="button"
+              onClick={() => reopenCookiePreferences()}
+              className="transition-colors hover:text-white"
+            >
+              Cookie settings
+            </button>
           </div>
         </div>
       </div>

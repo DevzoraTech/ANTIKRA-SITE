@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react"
+import { useMemo, useRef, useState, type FormEvent } from "react"
 import { ArrowRight, Check } from "lucide-react"
 import {
   contactIntents,
@@ -6,6 +6,7 @@ import {
   directContacts,
 } from "../../domain/company"
 import { openInquiry } from "../../shared/inquiry"
+import { createSpamChallenge, validateEnquirySpam } from "../../shared/spam/enquiryGuard"
 
 const accentBorder = {
   bronze: "border-[#9a6d23]",
@@ -28,11 +29,25 @@ const accentText = {
 export function ContactPage() {
   const [intentId, setIntentId] = useState(contactIntents[0].id)
   const [submitted, setSubmitted] = useState(false)
+  const [spamError, setSpamError] = useState("")
+  const startedAt = useRef(Date.now())
+  const challenge = useMemo(() => createSpamChallenge(), [])
   const intent = contactIntents.find((item) => item.id === intentId) ?? contactIntents[0]
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
+    const spam = validateEnquirySpam({
+      honeypot: String(data.get("company_website") ?? ""),
+      startedAt: startedAt.current,
+      challengeAnswer: String(data.get("challenge") ?? ""),
+      challengeExpected: challenge.expected,
+    })
+    if (spam) {
+      setSpamError(spam)
+      return
+    }
+    setSpamError("")
     const name = String(data.get("name") ?? "")
     const email = String(data.get("email") ?? "")
     const organization = String(data.get("organization") ?? "")
@@ -127,7 +142,7 @@ export function ContactPage() {
           </ul>
 
           <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-            <form onSubmit={onSubmit} className="space-y-5">
+            <form onSubmit={onSubmit} className="relative space-y-5">
               <p className="font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.2em] text-[#9a6d23]">
                 Tell us more · {intent.title}
               </p>
@@ -174,6 +189,26 @@ export function ContactPage() {
                   className="mt-2 w-full border border-black/15 bg-white px-3 py-3 text-[0.9rem] outline-none focus:border-[#9a6d23]"
                 />
               </label>
+              <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                <label>
+                  Company website
+                  <input name="company_website" tabIndex={-1} autoComplete="off" />
+                </label>
+              </div>
+              <label className="block">
+                <span className="font-display-sans text-[0.55rem] font-extrabold uppercase tracking-[0.12em] text-[#15110f]/50">
+                  Security check · {challenge.prompt}
+                </span>
+                <input
+                  required
+                  name="challenge"
+                  inputMode="numeric"
+                  className="mt-2 h-11 w-full max-w-[180px] border border-black/15 bg-white px-3 text-[0.9rem] outline-none focus:border-[#9a6d23]"
+                />
+              </label>
+              {spamError && (
+                <p className="text-[0.84rem] text-[#a53f26]">{spamError}</p>
+              )}
               <button
                 type="submit"
                 className="inline-flex h-11 items-center bg-[#9a6d23] px-6 font-display-sans text-[0.66rem] font-extrabold uppercase tracking-[0.08em] text-white hover:bg-[#7f5819]"

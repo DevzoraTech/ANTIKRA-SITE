@@ -1,33 +1,200 @@
-# ANTIKRA — https://antikra.com
+# ════════════════════════════════════════════════════════════
+# ANTIKRA — robots.txt
+# https://antikra.com
+# ════════════════════════════════════════════════════════════
 
+# Default
 User-agent: *
 Allow: /
 Disallow: /console
 Disallow: /console/
+Disallow: /*?*utm_
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Allow: /privacy
+Allow: /terms
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /manifest.json
+Allow: /og-image.jpg
+Allow: /og-image.png
+Allow: /favicon.svg
 
+# Google
 User-agent: Googlebot
 Allow: /
 Disallow: /console
 Disallow: /console/
+Crawl-delay: 0
 
+User-agent: Googlebot-Image
+Allow: /
+Allow: /og-image.jpg
+Allow: /og-image.png
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+Disallow: /console
+
+User-agent: Googlebot-News
+Allow: /research
+Allow: /research/
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+Disallow: /console
+
+User-agent: Storebot-Google
+Allow: /
+
+# Bing / Microsoft
 User-agent: Bingbot
 Allow: /
 Disallow: /console
 Disallow: /console/
+Crawl-delay: 1
 
+User-agent: msnbot
+Allow: /
+Disallow: /console
+
+User-agent: adidxbot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+Disallow: /console
+
+User-agent: Applebot-Extended
+Allow: /
+
+# DuckDuckGo / Yahoo / Yandex / Baidu
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /console
+
+User-agent: Slurp
+Allow: /
+Disallow: /console
+
+User-agent: YandexBot
+Allow: /
+Disallow: /console
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /console
+
+# Social crawlers (link previews)
+User-agent: facebookexternalhit
+Allow: /
+Allow: /og-image.jpg
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+Allow: /og-image.jpg
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /og-image.jpg
+
+User-agent: WhatsApp
+Allow: /
+Allow: /og-image.jpg
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+# AI / LLM crawlers
 User-agent: GPTBot
 Allow: /
+Disallow: /console
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: ClaudeBot
+Allow: /
+Disallow: /console
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: cohere-ai
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# SEO research bots
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+User-agent: DotBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: BLEXBot
+Allow: /
+Crawl-delay: 10
+
+# Block known aggressive scrapers (optional hardening)
+User-agent: PetalBot
+Disallow: /
+
+User-agent: DigExt
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+# Host / sitemap
+Host: https://antikra.com
 Sitemap: https://antikra.com/sitemap.xml

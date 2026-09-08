@@ -214,6 +214,24 @@ export const seoPages: Record<string, PageSeo> = {
     description:
       "Tell ANTIKRA what you need—a product, infrastructure, venture, research collaboration or partnership.",
   },
+  "/privacy": {
+    path: "/privacy",
+    title: "Privacy Policy | ANTIKRA",
+    description:
+      "How ANTIKRA collects, uses and protects information when you use antikra.com and related services.",
+  },
+  "/terms": {
+    path: "/terms",
+    title: "Terms of Use | ANTIKRA",
+    description:
+      "Terms governing use of antikra.com and related ANTIKRA public websites and materials.",
+  },
+  "/404": {
+    path: "/404",
+    title: "Page not found | ANTIKRA",
+    description: "The requested ANTIKRA page could not be found.",
+    noindex: true,
+  },
   "/console": {
     path: "/console",
     title: "Console | ANTIKRA",
@@ -221,6 +239,19 @@ export const seoPages: Record<string, PageSeo> = {
     noindex: true,
   },
 }
+
+const knownPrefixes = [
+  "/",
+  "/companies",
+  "/products",
+  "/solutions",
+  "/work",
+  "/research",
+  "/company",
+  "/privacy",
+  "/terms",
+  "/console",
+]
 
 export function resolveSeo(pathname: string): PageSeo {
   const clean = pathname.replace(/\/$/, "") || "/"
@@ -250,6 +281,13 @@ export function resolveSeo(pathname: string): PageSeo {
     }
   }
 
+  const known = knownPrefixes.some(
+    (prefix) => prefix !== "/" && (clean === prefix || clean.startsWith(`${prefix}/`)),
+  )
+  if (!known && clean !== "/") {
+    return { ...seoPages["/404"], path: clean }
+  }
+
   return seoPages["/"]
 }
 
@@ -259,4 +297,4 @@ export function absoluteUrl(path: string) {
 }
 
 export const SITE_ORIGIN = site
-export const OG_IMAGE = `${site}/og-image.png`
+export const OG_IMAGE = `${site}/og-image.jpg`

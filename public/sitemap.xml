@@ -11,7 +11,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://antikra.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://antikra.com/" />
     <image:image>
-      <image:loc>https://antikra.com/og-image.png</image:loc>
+      <image:loc>https://antikra.com/og-image.jpg</image:loc>
       <image:title>ANTIKRA — Global Technology Group</image:title>
     </image:image>
   </url>
@@ -49,5 +49,8 @@
   <url><loc>https://antikra.com/company/leadership</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://antikra.com/company/careers</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://antikra.com/company/contact</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+
+  <url><loc>https://antikra.com/privacy</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://antikra.com/terms</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
 
 </urlset>

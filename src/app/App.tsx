@@ -25,18 +25,36 @@ import { ResearchPage } from "../pages/research/ResearchPage"
 import { ResearchDetailPage } from "../pages/research/ResearchDetailPage"
 import { WorkPage, WorkDetailPage } from "../pages/work/WorkPage"
 import { ConsoleApp } from "../pages/console/ConsoleApp"
+import { PrivacyPage } from "../pages/legal/PrivacyPage"
+import { TermsPage } from "../pages/legal/TermsPage"
+import { NotFoundPage } from "../pages/system/NotFoundPage"
 import { useDocumentSeo } from "../shared/seo"
+import { CookieConsentBanner } from "../shared/ui/CookieConsentBanner"
+import type { ReactNode } from "react"
 
-export default function App() {
-  const pathname = window.location.pathname
-  useDocumentSeo(pathname)
-
+function renderRoute(pathname: string): ReactNode {
   if (pathname === "/") {
     return <HomePage />
   }
 
   if (pathname === "/console" || pathname.startsWith("/console/")) {
     return <ConsoleApp />
+  }
+
+  if (pathname === "/privacy" || pathname === "/privacy/") {
+    return (
+      <SiteLayout>
+        <PrivacyPage />
+      </SiteLayout>
+    )
+  }
+
+  if (pathname === "/terms" || pathname === "/terms/") {
+    return (
+      <SiteLayout>
+        <TermsPage />
+      </SiteLayout>
+    )
   }
 
   if (pathname === "/company" || pathname === "/company/") {
@@ -71,17 +89,25 @@ export default function App() {
     )
   }
 
+  if (pathname.startsWith("/company/")) {
+    return (
+      <SiteLayout>
+        <NotFoundPage />
+      </SiteLayout>
+    )
+  }
+
   const researchSlug = pathname.match(/^\/research\/([^/]+)/)?.[1]
   if (researchSlug) {
     const publication = getResearchBySlug(researchSlug)
     return (
       <SiteLayout>
-        {publication ? <ResearchDetailPage publication={publication} /> : <ResearchPage />}
+        {publication ? <ResearchDetailPage publication={publication} /> : <NotFoundPage />}
       </SiteLayout>
     )
   }
 
-  if (pathname === "/research" || pathname.startsWith("/research/")) {
+  if (pathname === "/research" || pathname === "/research/") {
     return (
       <SiteLayout>
         <ResearchPage />
@@ -94,12 +120,12 @@ export default function App() {
     const study = resolveWorkSlug(workSlug)
     return (
       <SiteLayout>
-        {study ? <WorkDetailPage study={study} /> : <WorkPage />}
+        {study ? <WorkDetailPage study={study} /> : <NotFoundPage />}
       </SiteLayout>
     )
   }
 
-  if (pathname === "/work" || pathname.startsWith("/work/")) {
+  if (pathname === "/work" || pathname === "/work/") {
     return (
       <SiteLayout>
         <WorkPage />
@@ -108,48 +134,135 @@ export default function App() {
   }
 
   const companySlug = pathname.match(/^\/companies\/([^/]+)/)?.[1]
-  const companyPage =
-    companySlug && companySlug in companyPages
-      ? companyPages[companySlug as keyof typeof companyPages]
-      : undefined
+  if (companySlug) {
+    const companyPage =
+      companySlug in companyPages
+        ? companyPages[companySlug as keyof typeof companyPages]
+        : undefined
+    return (
+      <SiteLayout>
+        {companyPage ? <CompanyDetailPage page={companyPage} /> : <NotFoundPage />}
+      </SiteLayout>
+    )
+  }
+
+  if (pathname === "/companies" || pathname.startsWith("/companies")) {
+    return (
+      <SiteLayout>
+        <CompaniesPage />
+      </SiteLayout>
+    )
+  }
+
   const productSlug = pathname.match(/^\/products\/([^/]+)/)?.[1]
+  if (productSlug) {
+    if (productSlug === "rembeh") {
+      return (
+        <SiteLayout>
+          <RembehProductPage />
+        </SiteLayout>
+      )
+    }
+    if (productSlug === "carmie") {
+      return (
+        <SiteLayout>
+          <CarmieProductPage />
+        </SiteLayout>
+      )
+    }
+    return (
+      <SiteLayout>
+        <NotFoundPage />
+      </SiteLayout>
+    )
+  }
+
+  if (pathname === "/products" || pathname.startsWith("/products")) {
+    return (
+      <SiteLayout>
+        <ProductsPage />
+      </SiteLayout>
+    )
+  }
+
   const solutionSlug = pathname.match(/^\/solutions\/([^/]+)/)?.[1]
-  const solutionPage =
-    solutionSlug && solutionSlug in solutionDetailPages
-      ? solutionDetailPages[solutionSlug as keyof typeof solutionDetailPages]
-      : undefined
+  if (solutionSlug) {
+    if (solutionSlug === "product-engineering") {
+      return (
+        <SiteLayout>
+          <ProductEngineeringSolutionPage />
+        </SiteLayout>
+      )
+    }
+    if (solutionSlug === "cloud-infrastructure") {
+      return (
+        <SiteLayout>
+          <CloudInfrastructureSolutionPage />
+        </SiteLayout>
+      )
+    }
+    if (solutionSlug === "ai-data") {
+      return (
+        <SiteLayout>
+          <AiDataSolutionPage />
+        </SiteLayout>
+      )
+    }
+    if (solutionSlug === "cybersecurity") {
+      return (
+        <SiteLayout>
+          <CybersecuritySolutionPage />
+        </SiteLayout>
+      )
+    }
+    if (solutionSlug === "experience-design") {
+      return (
+        <SiteLayout>
+          <ExperienceDesignSolutionPage />
+        </SiteLayout>
+      )
+    }
+    if (solutionSlug === "venture-building") {
+      return (
+        <SiteLayout>
+          <VentureBuildingSolutionPage />
+        </SiteLayout>
+      )
+    }
+    const solutionPage =
+      solutionSlug in solutionDetailPages
+        ? solutionDetailPages[solutionSlug as keyof typeof solutionDetailPages]
+        : undefined
+    return (
+      <SiteLayout>
+        {solutionPage ? <SolutionDetailPage page={solutionPage} /> : <NotFoundPage />}
+      </SiteLayout>
+    )
+  }
+
+  if (pathname === "/solutions" || pathname.startsWith("/solutions")) {
+    return (
+      <SiteLayout>
+        <SolutionsPage />
+      </SiteLayout>
+    )
+  }
 
   return (
     <SiteLayout>
-      {companyPage ? (
-        <CompanyDetailPage page={companyPage} />
-      ) : pathname.startsWith("/companies") ? (
-        <CompaniesPage />
-      ) : productSlug === "rembeh" ? (
-        <RembehProductPage />
-      ) : productSlug === "carmie" ? (
-        <CarmieProductPage />
-      ) : pathname.startsWith("/products") ? (
-        <ProductsPage />
-      ) : solutionSlug === "product-engineering" ? (
-        <ProductEngineeringSolutionPage />
-      ) : solutionSlug === "cloud-infrastructure" ? (
-        <CloudInfrastructureSolutionPage />
-      ) : solutionSlug === "ai-data" ? (
-        <AiDataSolutionPage />
-      ) : solutionSlug === "cybersecurity" ? (
-        <CybersecuritySolutionPage />
-      ) : solutionSlug === "experience-design" ? (
-        <ExperienceDesignSolutionPage />
-      ) : solutionSlug === "venture-building" ? (
-        <VentureBuildingSolutionPage />
-      ) : solutionPage ? (
-        <SolutionDetailPage page={solutionPage} />
-      ) : pathname.startsWith("/solutions") ? (
-        <SolutionsPage />
-      ) : (
-        <HomePage />
-      )}
+      <NotFoundPage />
     </SiteLayout>
+  )
+}
+
+export default function App() {
+  const pathname = window.location.pathname
+  useDocumentSeo(pathname)
+
+  return (
+    <>
+      {renderRoute(pathname)}
+      <CookieConsentBanner />
+    </>
   )
 }
