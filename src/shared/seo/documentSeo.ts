@@ -1,10 +1,11 @@
 import { useEffect } from "react"
 import {
+  BRAND_LOGO,
+  defaultKeywords,
   OG_IMAGE,
-  SITE_ORIGIN,
   absoluteUrl,
+  createPageJsonLd,
   resolveSeo,
-  type PageSeo,
 } from "../../domain/seo"
 
 function upsertMeta(
@@ -44,57 +45,6 @@ function upsertJsonLd(id: string, data: unknown) {
   el.textContent = JSON.stringify(data)
 }
 
-function pageJsonLd(seo: PageSeo) {
-  const url = absoluteUrl(seo.path)
-  const crumbs = seo.path
-    .split("/")
-    .filter(Boolean)
-    .reduce<Array<{ name: string; item: string }>>(
-      (acc, segment, index, parts) => {
-        const path = `/${parts.slice(0, index + 1).join("/")}`
-        acc.push({
-          name: segment.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
-          item: absoluteUrl(path),
-        })
-        return acc
-      },
-      [],
-    )
-
-  return {
-    "@context": "https://schema.org",
-    "@type": seo.type === "article" ? "Article" : "WebPage",
-    "@id": `${url}#webpage`,
-    url,
-    name: seo.title,
-    description: seo.description,
-    isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
-    about: { "@id": `${SITE_ORIGIN}/#organization` },
-    inLanguage: "en",
-    primaryImageOfPage: {
-      "@type": "ImageObject",
-      url: OG_IMAGE,
-    },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `${SITE_ORIGIN}/`,
-        },
-        ...crumbs.map((crumb, index) => ({
-          "@type": "ListItem",
-          position: index + 2,
-          name: crumb.name,
-          item: crumb.item,
-        })),
-      ],
-    },
-  }
-}
-
 export function applyDocumentSeo(pathname: string) {
   const seo = resolveSeo(pathname)
   const url = absoluteUrl(seo.path === "/" ? "/" : seo.path)
@@ -102,9 +52,11 @@ export function applyDocumentSeo(pathname: string) {
   document.title = seo.title
 
   upsertMeta('meta[name="description"]', { name: "description" }, seo.description)
-  if (seo.keywords) {
-    upsertMeta('meta[name="keywords"]', { name: "keywords" }, seo.keywords)
-  }
+  upsertMeta(
+    'meta[name="keywords"]',
+    { name: "keywords" },
+    seo.keywords ?? defaultKeywords,
+  )
   upsertMeta(
     'meta[name="robots"]',
     { name: "robots" },
@@ -121,6 +73,10 @@ export function applyDocumentSeo(pathname: string) {
   upsertMeta('meta[property="og:description"]', { property: "og:description" }, seo.description)
   upsertMeta('meta[property="og:url"]', { property: "og:url" }, url)
   upsertMeta('meta[property="og:image"]', { property: "og:image" }, OG_IMAGE)
+  upsertMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }, OG_IMAGE)
+  upsertMeta('meta[property="og:image:type"]', { property: "og:image:type" }, "image/jpeg")
+  upsertMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1200")
+  upsertMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "630")
   upsertMeta('meta[property="og:image:alt"]', { property: "og:image:alt" }, "ANTIKRA — Global technology group")
   upsertMeta('meta[property="og:locale"]', { property: "og:locale" }, "en_US")
 
@@ -128,9 +84,12 @@ export function applyDocumentSeo(pathname: string) {
   upsertMeta('meta[name="twitter:title"]', { name: "twitter:title" }, seo.title)
   upsertMeta('meta[name="twitter:description"]', { name: "twitter:description" }, seo.description)
   upsertMeta('meta[name="twitter:image"]', { name: "twitter:image" }, OG_IMAGE)
+  upsertMeta('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }, "ANTIKRA — Global technology group")
   upsertMeta('meta[name="twitter:site"]', { name: "twitter:site" }, "@antikragroup")
 
-  upsertJsonLd("antikra-page-jsonld", pageJsonLd(seo))
+  upsertJsonLd("antikra-page-jsonld", createPageJsonLd(seo))
+
+  upsertLink("apple-touch-icon", BRAND_LOGO)
 }
 
 export function useDocumentSeo(pathname: string) {

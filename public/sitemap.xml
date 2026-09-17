@@ -5,7 +5,7 @@
 
   <url>
     <loc>https://antikra.com/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://antikra.com/" />
@@ -16,41 +16,41 @@
     </image:image>
   </url>
 
-  <url><loc>https://antikra.com/companies</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://antikra.com/companies/mechanism</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/companies/cosmos</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/companies/orrery</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/companies/astra</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/companies/helios</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/companies/olympia</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/companies</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://antikra.com/companies/mechanism</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/companies/cosmos</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/companies/orrery</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/companies/astra</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/companies/helios</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/companies/olympia</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <url><loc>https://antikra.com/products</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://antikra.com/products/rembeh</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/products/carmie</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/products</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://antikra.com/products/rembeh</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/products/carmie</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <url><loc>https://antikra.com/solutions</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://antikra.com/solutions/product-engineering</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://antikra.com/solutions/cloud-infrastructure</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://antikra.com/solutions/ai-data</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://antikra.com/solutions/cybersecurity</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://antikra.com/solutions/experience-design</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://antikra.com/solutions/venture-building</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://antikra.com/solutions</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://antikra.com/solutions/product-engineering</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://antikra.com/solutions/cloud-infrastructure</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://antikra.com/solutions/ai-data</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://antikra.com/solutions/cybersecurity</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://antikra.com/solutions/experience-design</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://antikra.com/solutions/venture-building</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
 
-  <url><loc>https://antikra.com/work</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/work/rembeh</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://antikra.com/work/carmie</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://antikra.com/work/grid-insights</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://antikra.com/work</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/work/rembeh</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://antikra.com/work/carmie</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://antikra.com/work/grid-insights</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://antikra.com/research</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://antikra.com/research/systems-under-constraint</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://antikra.com/research/digital-operations-in-distributed-lending</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://antikra.com/research</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://antikra.com/research/systems-under-constraint</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://antikra.com/research/digital-operations-in-distributed-lending</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url><loc>https://antikra.com/company</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
-  <url><loc>https://antikra.com/company/leadership</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://antikra.com/company/careers</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://antikra.com/company/contact</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://antikra.com/company</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://antikra.com/company/leadership</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://antikra.com/company/careers</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://antikra.com/company/contact</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
 
-  <url><loc>https://antikra.com/privacy</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://antikra.com/terms</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://antikra.com/privacy</loc><lastmod>2026-09-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://antikra.com/terms</loc><lastmod>2026-09-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
 
 </urlset>

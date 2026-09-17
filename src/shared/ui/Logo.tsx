@@ -1,3 +1,5 @@
+import antikraLogo from "../../assets/branding/antikra-logo.png"
+
 interface LogoProps {
   className?: string
   variant?: "full" | "mark" | "wordmark"
@@ -6,10 +8,10 @@ interface LogoProps {
 }
 
 const sizeMap = {
-  sm: { mark: 32, word: "text-base" },
-  md: { mark: 40, word: "text-lg" },
-  lg: { mark: 56, word: "text-xl" },
-  xl: { mark: 80, word: "text-2xl" },
+  sm: { mark: 32, image: 36 },
+  md: { mark: 40, image: 48 },
+  lg: { mark: 56, image: 68 },
+  xl: { mark: 80, image: 88 },
 }
 
 const SPOKES = [0, 45, 90, 135, 180, 225, 270, 315]
@@ -174,16 +176,6 @@ function MarkSvg({ size, animated }: { size: number; animated: boolean }) {
   )
 }
 
-function Wordmark({ className }: { className?: string }) {
-  return (
-    <span
-      className={`font-display-sans font-bold tracking-[0.22em] text-current ${className ?? ""}`}
-    >
-      ANTI<span className="text-brand">KRA</span>
-    </span>
-  )
-}
-
 export function Logo({
   className = "",
   variant = "full",
@@ -202,19 +194,30 @@ export function Logo({
 
   if (variant === "wordmark") {
     return (
-      <span className={`inline-flex ${className}`} aria-label="ANTIKRA">
-        <Wordmark className={dims.word} />
+      <span className={`inline-flex overflow-hidden ${className}`} aria-label="ANTIKRA">
+        <img
+          src={antikraLogo}
+          alt=""
+          width={dims.image}
+          height={dims.image}
+          className="block h-auto w-full object-contain"
+        />
       </span>
     )
   }
 
   return (
     <span
-      className={`inline-flex items-center gap-3 ${className}`}
+      className={`inline-flex shrink-0 items-center justify-center ${className}`}
       aria-label="ANTIKRA"
     >
-      <MarkSvg size={dims.mark} animated={animated} />
-      <Wordmark className={dims.word} />
+      <img
+        src={antikraLogo}
+        alt=""
+        width={dims.image}
+        height={dims.image}
+        className="block object-contain"
+      />
     </span>
   )
 }

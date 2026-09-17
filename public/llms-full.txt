@@ -1,0 +1,85 @@
+# ANTIKRA: company and capability reference
+
+Canonical website: https://antikra.com/
+
+Preferred name: ANTIKRA
+
+Legal and group name used publicly: ANTIKRA Group
+
+Description: ANTIKRA is a global technology group that builds and operates digital products, cloud infrastructure, data and AI systems, cybersecurity systems, digital experiences and technology ventures. The group is organized as six specialist companies that can operate independently or together.
+
+Location: ANTIKRA operates globally with an operating base in Kampala, Uganda.
+
+## Specialist companies
+
+### Mechanism — Product Engineering
+
+Mechanism designs and engineers digital products, web and mobile applications, enterprise platforms, integrations and operational systems.
+
+Canonical page: https://antikra.com/companies/mechanism
+
+### Cosmos — Cloud & Infrastructure
+
+Cosmos designs, deploys and operates cloud architecture, application infrastructure, platform engineering, DevOps, automation, reliability and observability.
+
+Canonical page: https://antikra.com/companies/cosmos
+
+### Orrery — AI & Data
+
+Orrery builds data platforms, analytics, business intelligence, predictive systems, applied AI and intelligent automation.
+
+Canonical page: https://antikra.com/companies/orrery
+
+### Astra — Cybersecurity
+
+Astra delivers security architecture, application and API security, cloud security, identity and access, data security and security monitoring.
+
+Canonical page: https://antikra.com/companies/astra
+
+### Helios — Experience & Design
+
+Helios provides product strategy, user research, information architecture, interaction design, interface design and design systems.
+
+Canonical page: https://antikra.com/companies/helios
+
+### Olympia — Venture Building
+
+Olympia identifies opportunities, validates business models and builds technology ventures using capabilities from across ANTIKRA.
+
+Canonical page: https://antikra.com/companies/olympia
+
+## Products
+
+### Rembeh
+
+Rembeh is financial operations infrastructure for lending businesses and distributed branch networks.
+
+Canonical page: https://antikra.com/products/rembeh
+
+### Carmie
+
+Carmie is technology infrastructure connecting vehicle owners with automotive service providers, including garages and towing providers.
+
+Canonical page: https://antikra.com/products/carmie
+
+## Solutions
+
+- Product engineering: https://antikra.com/solutions/product-engineering
+- Cloud and infrastructure: https://antikra.com/solutions/cloud-infrastructure
+- AI and data: https://antikra.com/solutions/ai-data
+- Cybersecurity: https://antikra.com/solutions/cybersecurity
+- Experience and design: https://antikra.com/solutions/experience-design
+- Venture building: https://antikra.com/solutions/venture-building
+
+## Entity relationships
+
+ANTIKRA is the parent technology group. Mechanism, Cosmos, Orrery, Astra, Helios and Olympia are the specialist companies in the ANTIKRA system. Rembeh and Carmie are ANTIKRA products built through capabilities across the group.
+
+Official organization logo: https://antikra.com/antikra-logo.png
+
+Official social profiles:
+
+- LinkedIn: https://linkedin.com/company/antikragroup
+- X: https://twitter.com/antikragroup
+
+Contact: https://antikra.com/company/contact

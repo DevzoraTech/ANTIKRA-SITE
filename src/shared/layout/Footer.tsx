@@ -1,6 +1,7 @@
 import { Linkedin, Mail, MapPin, Twitter } from "lucide-react"
 import { openInquiry } from "../inquiry"
 import { reopenCookiePreferences } from "../ui/CookieConsentBanner"
+import { Logo } from "../ui"
 
 const columns = [
   {
@@ -54,12 +55,13 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1500px] px-8 py-12 md:px-12 xl:px-[72px]">
         <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-[1.35fr_repeat(5,1fr)_1.1fr]">
           <div>
-            <p className="font-display text-[1.75rem] font-semibold uppercase leading-none tracking-[0.22em] text-[#a97b32]">
-              ANTIKRA
-            </p>
-            <p className="mt-1 font-display-sans text-[0.42rem] font-black uppercase tracking-[0.5em] text-white/52">
-              Group
-            </p>
+            <a
+              href="/"
+              aria-label="ANTIKRA home"
+              className="inline-flex bg-white p-1.5"
+            >
+              <Logo size="xl" />
+            </a>
             <p className="mt-5 max-w-[220px] text-[0.68rem] leading-[1.55] text-white/45">
               Global technology group building products, infrastructure and companies
               for complex environments.

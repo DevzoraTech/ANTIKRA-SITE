@@ -51,7 +51,7 @@ export function Header() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/92 backdrop-blur-md">
         <div className="mx-auto flex h-[88px] w-full max-w-[1500px] items-center justify-between px-7 md:px-10 lg:px-12">
           <a href="/" className="shrink-0 text-brand" aria-label="ANTIKRA home">
-            <Logo animated size="lg" className="[&>span:last-child]:text-[1.55rem]" />
+            <Logo size="lg" />
           </a>
 
           <nav className="hidden items-center gap-10 xl:flex">
@@ -101,7 +101,7 @@ export function Header() {
       {menuOpen && (
         <div className="fixed inset-0 z-[60] bg-white xl:hidden">
           <div className="flex h-[88px] items-center justify-between border-b border-black/10 px-7">
-            <Logo animated size="md" className="text-brand" />
+            <Logo size="md" />
             <button
               type="button"
               className="flex h-11 w-11 items-center justify-center border border-brand/35 text-brand"

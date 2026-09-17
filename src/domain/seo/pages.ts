@@ -298,3 +298,4 @@ export function absoluteUrl(path: string) {
 
 export const SITE_ORIGIN = site
 export const OG_IMAGE = `${site}/og-image.jpg`
+export const BRAND_LOGO = `${site}/antikra-logo.png`

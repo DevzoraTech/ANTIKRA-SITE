@@ -66,8 +66,9 @@
     <meta name="application-name" content="ANTIKRA" />
     <meta name="msapplication-TileColor" content="#9a6d23" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/antikra-logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/antikra-logo.png" />
+    <link rel="apple-touch-icon" href="/antikra-logo.png" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
@@ -90,7 +91,10 @@
           "logo": {
             "@type": "ImageObject",
             "@id": "https://antikra.com/#logo",
-            "url": "https://antikra.com/favicon.svg",
+            "url": "https://antikra.com/antikra-logo.png",
+            "contentUrl": "https://antikra.com/antikra-logo.png",
+            "width": 1254,
+            "height": 1254,
             "caption": "ANTIKRA"
           },
           "image": "https://antikra.com/og-image.jpg",
@@ -100,7 +104,9 @@
             "addressLocality": "Kampala",
             "addressCountry": "UG"
           },
+          "slogan": "Technology, built as a system.",
           "areaServed": "Worldwide",
+          "knowsLanguage": ["English"],
           "knowsAbout": [
             "Product Engineering",
             "Cloud Infrastructure",
@@ -139,15 +145,7 @@
           "name": "ANTIKRA",
           "description": "Global technology group — companies, products, solutions, work and research.",
           "publisher": { "@id": "https://antikra.com/#organization" },
-          "inLanguage": "en",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://antikra.com/research?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
+          "inLanguage": "en"
         },
         {
           "@type": "WebPage",
@@ -162,7 +160,7 @@
             "url": "https://antikra.com/og-image.jpg"
           },
           "inLanguage": "en",
-          "dateModified": "2026-09-07"
+          "dateModified": "2026-09-17"
         },
         {
           "@type": "SiteNavigationElement",
@@ -206,7 +204,7 @@
                 "operatingSystem": "Web",
                 "url": "https://antikra.com/products/rembeh",
                 "description": "Financial operations infrastructure for lending businesses.",
-                "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+                "creator": { "@id": "https://antikra.com/#organization" }
               }
             },
             {
@@ -219,53 +217,7 @@
                 "operatingSystem": "Web",
                 "url": "https://antikra.com/products/carmie",
                 "description": "Infrastructure for the automotive service economy.",
-                "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
-              }
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://antikra.com/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is ANTIKRA?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ANTIKRA is a global technology group of six specialist companies—Mechanism, Cosmos, Orrery, Astra, Helios and Olympia—building products, infrastructure and ventures for complex environments worldwide."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where does ANTIKRA operate?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ANTIKRA is a global technology group. Operations include Kampala, Uganda, with work spanning markets and clients internationally."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What products does ANTIKRA own?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ANTIKRA owns and operates products including Rembeh, financial operations infrastructure for lending businesses, and Carmie, infrastructure for the automotive service economy."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What solutions can clients engage ANTIKRA for?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Clients can engage ANTIKRA for product engineering, cloud and infrastructure, AI and data, cybersecurity, experience design, and venture building."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do I contact ANTIKRA?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Start an enquiry at antikra.com/company/contact. Describe what you are trying to accomplish and ANTIKRA will connect you with the right team."
+                "creator": { "@id": "https://antikra.com/#organization" }
               }
             }
           ]

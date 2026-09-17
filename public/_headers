@@ -30,6 +30,14 @@
   Cache-Control: public, max-age=86400, must-revalidate
   Content-Type: text/plain; charset=utf-8
 
+## AI-readable company profiles
+/llms.txt
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: text/plain; charset=utf-8
+/llms-full.txt
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: text/plain; charset=utf-8
+
 ## Manifest
 /manifest.json
   Cache-Control: public, max-age=86400, must-revalidate

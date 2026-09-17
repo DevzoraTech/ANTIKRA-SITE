@@ -1,0 +1,30 @@
+# ANTIKRA
+
+> ANTIKRA is a global technology group designing, engineering and operating digital products, technology infrastructure and companies for complex environments. Its operating base is Kampala, Uganda, and it serves organizations internationally.
+
+ANTIKRA combines six specialist companies as one coordinated technology system:
+
+- [Mechanism](https://antikra.com/companies/mechanism): product engineering and software systems.
+- [Cosmos](https://antikra.com/companies/cosmos): cloud infrastructure, platforms and operations.
+- [Orrery](https://antikra.com/companies/orrery): artificial intelligence, data engineering and analytics.
+- [Astra](https://antikra.com/companies/astra): cybersecurity across applications, infrastructure and data.
+- [Helios](https://antikra.com/companies/helios): experience design, product design and design systems.
+- [Olympia](https://antikra.com/companies/olympia): technology venture building.
+
+## Primary pages
+
+- [ANTIKRA home](https://antikra.com/)
+- [Companies](https://antikra.com/companies)
+- [Products](https://antikra.com/products)
+- [Solutions and capabilities](https://antikra.com/solutions)
+- [Selected work](https://antikra.com/work)
+- [Research](https://antikra.com/research)
+- [Company profile](https://antikra.com/company)
+- [Contact ANTIKRA](https://antikra.com/company/contact)
+
+## Products
+
+- [Rembeh](https://antikra.com/products/rembeh): financial operations infrastructure for lending businesses.
+- [Carmie](https://antikra.com/products/carmie): infrastructure for the automotive service economy.
+
+For a fuller company and capability reference, see [llms-full.txt](https://antikra.com/llms-full.txt).
