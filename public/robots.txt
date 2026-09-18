@@ -16,8 +16,6 @@ Allow: /terms
 Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /manifest.json
-Allow: /og-image.jpg
-Allow: /og-image.png
 Allow: /antikra-logo.png
 Allow: /favicon.svg
 Allow: /llms.txt
@@ -32,8 +30,7 @@ Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
-Allow: /og-image.jpg
-Allow: /og-image.png
+Allow: /antikra-logo.png
 Allow: /*.png$
 Allow: /*.webp$
 Allow: /*.svg$
@@ -96,22 +93,22 @@ Disallow: /console
 # Social crawlers (link previews)
 User-agent: facebookexternalhit
 Allow: /
-Allow: /og-image.jpg
+Allow: /antikra-logo.png
 
 User-agent: Facebot
 Allow: /
 
 User-agent: Twitterbot
 Allow: /
-Allow: /og-image.jpg
+Allow: /antikra-logo.png
 
 User-agent: LinkedInBot
 Allow: /
-Allow: /og-image.jpg
+Allow: /antikra-logo.png
 
 User-agent: WhatsApp
 Allow: /
-Allow: /og-image.jpg
+Allow: /antikra-logo.png
 
 User-agent: Slackbot
 Allow: /

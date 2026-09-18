@@ -1,13 +1,13 @@
 import { ArrowRight, MapPin } from "lucide-react"
-import heroImg from "../../../assets/home/hero-img.png"
+import heroImg from "../../../assets/home/hero.png"
 
 export function HomeHeroSection() {
   return (
     <section className="relative isolate min-h-[608px] overflow-hidden border-b border-black/10 bg-[#f8f2e9] pt-[88px] md:min-h-[663px]">
       <img
         src={heroImg}
-        alt="ANTIKRA Group building overlooking Kampala"
-        className="home-hero-image absolute inset-x-0 top-[88px] -z-20 h-[calc(100%-88px)] w-full object-cover object-[50%_44%]"
+        alt="ANTIKRA technology team presenting a connected product system"
+        className="home-hero-image absolute inset-x-0 top-[88px] -z-20 h-[calc(100%-88px)] w-full object-cover object-center"
       />
       {/* Desktop: soft left veil so type sits on atmosphere, not on a card */}
       <div className="absolute inset-x-0 bottom-0 top-[88px] -z-10 hidden bg-[linear-gradient(90deg,#f8f2e9_0%,rgba(248,242,233,0.97)_22%,rgba(248,242,233,0.7)_34%,rgba(248,242,233,0.28)_48%,rgba(248,242,233,0.06)_61%,rgba(248,242,233,0)_72%)] md:block" />

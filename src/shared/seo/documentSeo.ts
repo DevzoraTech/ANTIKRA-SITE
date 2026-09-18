@@ -74,9 +74,9 @@ export function applyDocumentSeo(pathname: string) {
   upsertMeta('meta[property="og:url"]', { property: "og:url" }, url)
   upsertMeta('meta[property="og:image"]', { property: "og:image" }, OG_IMAGE)
   upsertMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }, OG_IMAGE)
-  upsertMeta('meta[property="og:image:type"]', { property: "og:image:type" }, "image/jpeg")
-  upsertMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1200")
-  upsertMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "630")
+  upsertMeta('meta[property="og:image:type"]', { property: "og:image:type" }, "image/png")
+  upsertMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1254")
+  upsertMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "1254")
   upsertMeta('meta[property="og:image:alt"]', { property: "og:image:alt" }, "ANTIKRA — Global technology group")
   upsertMeta('meta[property="og:locale"]', { property: "og:locale" }, "en_US")
 
