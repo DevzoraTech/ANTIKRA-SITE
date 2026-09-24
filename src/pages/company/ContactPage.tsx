@@ -1,12 +1,11 @@
-import { useMemo, useRef, useState, type FormEvent } from "react"
+import { useState, type FormEvent } from "react"
 import { ArrowRight, Check } from "lucide-react"
 import {
   contactIntents,
   contactProcess,
   directContacts,
+  submitContactEnquiry,
 } from "../../domain/company"
-import { openInquiry } from "../../shared/inquiry"
-import { createSpamChallenge, validateEnquirySpam } from "../../shared/spam/enquiryGuard"
 
 const accentBorder = {
   bronze: "border-[#9a6d23]",
@@ -28,42 +27,33 @@ const accentText = {
 
 export function ContactPage() {
   const [intentId, setIntentId] = useState(contactIntents[0].id)
-  const [submitted, setSubmitted] = useState(false)
-  const [spamError, setSpamError] = useState("")
-  const startedAt = useRef(Date.now())
-  const challenge = useMemo(() => createSpamChallenge(), [])
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [statusMessage, setStatusMessage] = useState("")
   const intent = contactIntents.find((item) => item.id === intentId) ?? contactIntents[0]
 
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const data = new FormData(event.currentTarget)
-    const spam = validateEnquirySpam({
-      honeypot: String(data.get("company_website") ?? ""),
-      startedAt: startedAt.current,
-      challengeAnswer: String(data.get("challenge") ?? ""),
-      challengeExpected: challenge.expected,
-    })
-    if (spam) {
-      setSpamError(spam)
-      return
+    const form = event.currentTarget
+    const data = new FormData(form)
+    setStatus("submitting")
+    setStatusMessage("")
+    try {
+      const receipt = await submitContactEnquiry({
+        intentId: intent.id,
+        intent: intent.title,
+        name: String(data.get("name") ?? "").trim(),
+        email: String(data.get("email") ?? "").trim(),
+        organization: String(data.get("organization") ?? "").trim(),
+        message: String(data.get("message") ?? "").trim(),
+        website: String(data.get("company_website") ?? "").trim(),
+      })
+      form.reset()
+      setStatus("success")
+      setStatusMessage(`Enquiry received. Reference ${receipt.id}.`)
+    } catch (error) {
+      setStatus("error")
+      setStatusMessage(error instanceof Error ? error.message : "The enquiry could not be submitted.")
     }
-    setSpamError("")
-    const name = String(data.get("name") ?? "")
-    const email = String(data.get("email") ?? "")
-    const organization = String(data.get("organization") ?? "")
-    const message = String(data.get("message") ?? "")
-    openInquiry(
-      `ANTIKRA enquiry · ${intent.title}`,
-      [
-        `Intent: ${intent.title}`,
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Organization: ${organization}`,
-        "",
-        message,
-      ].join("\n"),
-    )
-    setSubmitted(true)
   }
 
   return (
@@ -195,25 +185,13 @@ export function ContactPage() {
                   <input name="company_website" tabIndex={-1} autoComplete="off" />
                 </label>
               </div>
-              <label className="block">
-                <span className="font-display-sans text-[0.55rem] font-extrabold uppercase tracking-[0.12em] text-[#15110f]/50">
-                  Security check · {challenge.prompt}
-                </span>
-                <input
-                  required
-                  name="challenge"
-                  inputMode="numeric"
-                  className="mt-2 h-11 w-full max-w-[180px] border border-black/15 bg-white px-3 text-[0.9rem] outline-none focus:border-[#9a6d23]"
-                />
-              </label>
-              {spamError && (
-                <p className="text-[0.84rem] text-[#a53f26]">{spamError}</p>
-              )}
+              {statusMessage && <p role={status === "error" ? "alert" : "status"} className={`border px-4 py-3 text-[0.84rem] ${status === "success" ? "border-[#0d6b47]/30 bg-[#0d6b47]/8 text-[#0d6b47]" : "border-[#a53f26]/30 bg-[#a53f26]/8 text-[#a53f26]"}`}>{statusMessage}</p>}
               <button
                 type="submit"
-                className="inline-flex h-11 items-center bg-[#9a6d23] px-6 font-display-sans text-[0.66rem] font-extrabold uppercase tracking-[0.08em] text-white hover:bg-[#7f5819]"
+                disabled={status === "submitting"}
+                className="inline-flex h-11 items-center bg-[#9a6d23] px-6 font-display-sans text-[0.66rem] font-extrabold uppercase tracking-[0.08em] text-white hover:bg-[#7f5819] disabled:cursor-wait disabled:opacity-60"
               >
-                {submitted ? "Opening mail…" : "Send enquiry"}
+                {status === "submitting" ? "Sending securely…" : "Send enquiry"}
               </button>
             </form>
 
@@ -246,17 +224,7 @@ export function ContactPage() {
                         >
                           Explore careers
                         </a>
-                      ) : (
-                        <button
-                          type="button"
-                          onClick={() =>
-                            openInquiry(`ANTIKRA · ${item.label}`, `Regarding: ${item.label}\n\n`)
-                          }
-                          className="mt-1 text-[0.9rem] text-[#16110f] underline-offset-4 hover:underline"
-                        >
-                          Send enquiry
-                        </button>
-                      )}
+                      ) : <a href={`mailto:${item.email}`} className="mt-1 inline-block text-[0.9rem] text-[#16110f] underline-offset-4 hover:underline">{item.email}</a>}
                     </li>
                   ))}
                 </ul>
@@ -294,19 +262,13 @@ export function ContactPage() {
               Security
             </p>
             <h3 className="mt-3 font-display text-[1.5rem] font-semibold">Found a security issue?</h3>
-            <button
-              type="button"
-              onClick={() =>
-                openInquiry(
-                  "ANTIKRA security report",
-                  "I would like to report a security issue.\n\nDetails:\n",
-                )
-              }
+            <a
+              href="mailto:security@antikra.com?subject=ANTIKRA%20security%20report"
               className="mt-3 inline-flex items-center gap-2 text-[0.86rem] font-semibold text-[#174783]"
             >
               Report a security issue
               <ArrowRight className="h-3.5 w-3.5" />
-            </button>
+            </a>
           </div>
         </div>
       </section>

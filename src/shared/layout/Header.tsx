@@ -59,21 +59,35 @@ export function Header() {
               const active = isActivePath(pathname, section.href)
 
               return (
-                <a
-                  key={section.label}
-                  href={section.href ?? "#"}
-                  className={`relative inline-flex h-[88px] items-center gap-1.5 text-[15px] font-medium transition-colors ${
-                    active ? "text-ink" : "text-ink/86 hover:text-brand"
-                  }`}
-                >
-                  {section.label}
+                <div key={section.label} className="group relative flex h-[88px] items-center">
+                  <a
+                    href={section.href ?? "#"}
+                    className={`relative inline-flex h-[88px] items-center gap-1.5 text-[15px] font-medium transition-colors ${
+                      active ? "text-ink" : "text-ink/86 hover:text-brand"
+                    }`}
+                    aria-haspopup={section.children ? "menu" : undefined}
+                  >
+                    {section.label}
+                    {section.children && <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" strokeWidth={1.8} />}
+                    {active && <span className="absolute bottom-[26px] left-0 h-px w-full bg-brand" />}
+                  </a>
                   {section.children && (
-                    <ChevronDown className="h-3.5 w-3.5" strokeWidth={1.8} />
+                    <div className="invisible absolute left-1/2 top-[76px] z-20 w-[290px] -translate-x-1/2 border border-black/10 bg-white p-2 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.12)] transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100" role="menu">
+                      <div className="border-b border-black/8 px-3 py-3">
+                        <p className="font-display-sans text-[0.52rem] font-extrabold uppercase tracking-[0.14em] text-brand">{section.label}</p>
+                        <p className="mt-1 text-[0.72rem] leading-5 text-ink/55">{section.description}</p>
+                      </div>
+                      <div className="py-1">
+                        {section.children.map((item) => (
+                          <a key={item.href} href={item.href} role="menuitem" className="block border-b border-black/6 px-3 py-3 last:border-0 hover:bg-[#f8f2e9] focus:bg-[#f8f2e9] focus:outline-none">
+                            <span className="block text-[0.82rem] font-semibold text-ink">{item.label}</span>
+                            <span className="mt-0.5 block text-[0.68rem] leading-4 text-ink/50">{item.description}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   )}
-                  {active && (
-                    <span className="absolute bottom-[26px] left-0 h-px w-full bg-brand" />
-                  )}
-                </a>
+                </div>
               )
             })}
           </nav>
@@ -114,17 +128,19 @@ export function Header() {
 
           <nav className="px-7 py-8">
             {navMenu.map((section) => (
-              <a
-                key={section.label}
-                href={section.href ?? "#"}
-                onClick={closeMenu}
-                className="flex items-center justify-between border-b border-black/10 py-5 font-display text-2xl text-ink"
-              >
-                {section.label}
+              <div key={section.label} className="border-b border-black/10">
+                <a href={section.href ?? "#"} onClick={closeMenu} className="flex items-center justify-between py-4 font-display text-2xl text-ink">
+                  {section.label}
+                  {section.children && <ChevronDown className="h-4 w-4 text-brand" />}
+                </a>
                 {section.children && (
-                  <ChevronDown className="h-4 w-4 text-brand" />
+                  <div className="grid grid-cols-2 gap-x-5 pb-4">
+                    {section.children.map((item) => (
+                      <a key={item.href} href={item.href} onClick={closeMenu} className="py-2 text-[0.78rem] font-medium text-ink/60 hover:text-brand">{item.label}</a>
+                    ))}
+                  </div>
                 )}
-              </a>
+              </div>
             ))}
             <a
               href="/console"
