@@ -32,6 +32,11 @@ import { useDocumentSeo } from "../shared/seo"
 import { CookieConsentBanner } from "../shared/ui/CookieConsentBanner"
 import type { ReactNode } from "react"
 
+function normalizePathname(pathname: string) {
+  if (pathname === "/") return pathname
+  return pathname.replace(/\/+$/, "") || "/"
+}
+
 function renderRoute(pathname: string): ReactNode {
   if (pathname === "/") {
     return <HomePage />
@@ -256,7 +261,7 @@ function renderRoute(pathname: string): ReactNode {
 }
 
 export default function App() {
-  const pathname = window.location.pathname
+  const pathname = normalizePathname(window.location.pathname)
   useDocumentSeo(pathname)
 
   return (
