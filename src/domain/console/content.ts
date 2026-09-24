@@ -23,5 +23,3 @@ export const consoleGate: ConsoleGateContent = {
     },
   ],
 }
-
-export * from "./session"
