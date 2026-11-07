@@ -86,7 +86,7 @@ function SolutionHero({
   // Engineering — solid type plane + photo half (magazine)
   if (visual === "engineering") {
     return (
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="grid min-h-[580px] lg:grid-cols-2">
           <div className="flex flex-col justify-center bg-[#f8f2e9] px-8 py-14 md:px-12 xl:px-16">
             <p className={`font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.2em] ${accentText[accent]}`}>
@@ -116,7 +116,7 @@ function SolutionHero({
   // Cloud — photo banner on top, then solid content block (stacked, no overlay)
   if (visual === "cloud") {
     return (
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="relative h-[240px] md:h-[300px]">
           <img src={heroImage} alt="" className="absolute inset-0 h-full w-full object-cover object-[50%_40%]" />
         </div>
@@ -150,7 +150,7 @@ function SolutionHero({
   // AI — centered editorial over darkened image
   if (visual === "ai") {
     return (
-      <section className="relative isolate min-h-[620px] overflow-hidden border-b border-black/10 pt-[88px]">
+      <section className="relative isolate min-h-[620px] overflow-hidden border-b border-black/10 pt-[var(--site-header-h)]">
         <img src={heroImage} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-[#111414]/78" />
         <div className="mx-auto flex min-h-[532px] max-w-[720px] flex-col items-center justify-center px-8 py-20 text-center text-white">
@@ -177,7 +177,7 @@ function SolutionHero({
   // Security — dark, left-aligned, technical
   if (visual === "security") {
     return (
-      <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0c1218] pt-[88px] text-white">
+      <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0c1218] pt-[var(--site-header-h)] text-white">
         <img
           src={heroImage}
           alt=""
@@ -212,7 +212,7 @@ function SolutionHero({
 
   // Fallback — still avoid the old left-veil formula
   return (
-    <section className="border-b border-black/10 bg-[#f8f2e9] pt-[88px]">
+    <section className="border-b border-black/10 bg-[#f8f2e9] pt-[var(--site-header-h)]">
       <div className="mx-auto max-w-[1500px] px-8 py-16 md:px-12 xl:px-[72px]">
         <p className={`font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.2em] ${accentText[accent]}`}>
           {page.solution.title}

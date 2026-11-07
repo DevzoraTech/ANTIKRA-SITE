@@ -58,7 +58,7 @@ export function ContactPage() {
 
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="mx-auto grid max-w-[1500px] gap-10 px-8 py-16 md:px-12 lg:grid-cols-[1.1fr_0.9fr] xl:px-[72px]">
           <div>
             <p className="font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.22em] text-[#9a6d23]">

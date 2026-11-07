@@ -50,7 +50,7 @@ export function CompanyBrandHero({ page }: { page: CompanyPageContent }) {
 
   if (page.id === "mechanism") {
     return (
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="grid min-h-[600px] lg:grid-cols-[0.95fr_1.05fr]">
           <div className="flex flex-col justify-center bg-[#f8f2e9] px-8 py-16 md:px-12 xl:px-16">
             <p className={`font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.22em] ${companyAccentText[accent]}`}>
@@ -82,7 +82,7 @@ export function CompanyBrandHero({ page }: { page: CompanyPageContent }) {
 
   if (page.id === "cosmos") {
     return (
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="relative h-[260px] md:h-[320px]">
           <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover object-[50%_35%]" />
         </div>
@@ -113,7 +113,7 @@ export function CompanyBrandHero({ page }: { page: CompanyPageContent }) {
 
   if (page.id === "orrery") {
     return (
-      <section className="relative isolate min-h-[620px] overflow-hidden border-b border-black/10 pt-[88px]">
+      <section className="relative isolate min-h-[620px] overflow-hidden border-b border-black/10 pt-[var(--site-header-h)]">
         <img src={image} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-[#1a1028]/80" />
         <div className="mx-auto flex min-h-[532px] max-w-[740px] flex-col items-center justify-center px-8 py-20 text-center text-white">
@@ -137,7 +137,7 @@ export function CompanyBrandHero({ page }: { page: CompanyPageContent }) {
 
   if (page.id === "astra") {
     return (
-      <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0c1218] pt-[88px] text-white">
+      <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0c1218] pt-[var(--site-header-h)] text-white">
         <img
           src={image}
           alt=""
@@ -169,7 +169,7 @@ export function CompanyBrandHero({ page }: { page: CompanyPageContent }) {
 
   if (page.id === "helios") {
     return (
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="grid min-h-[600px] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative min-h-[300px] order-2 lg:order-1 lg:min-h-full">
             <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover object-[42%_40%]" />
@@ -197,10 +197,10 @@ export function CompanyBrandHero({ page }: { page: CompanyPageContent }) {
 
   // Olympia — dark cinematic
   return (
-    <section className="relative isolate min-h-[100svh] overflow-hidden bg-[#111414] pt-[88px] text-white">
+    <section className="relative isolate min-h-[100svh] overflow-hidden bg-[#111414] pt-[var(--site-header-h)] text-white">
       <img src={image} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-35" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_35%_40%,rgba(17,20,20,0.3),rgba(17,20,20,0.92)_72%)]" />
-      <div className="mx-auto flex min-h-[calc(100svh-88px)] max-w-[1000px] flex-col items-center justify-center px-8 py-20 text-center">
+      <div className="mx-auto flex min-h-[calc(100svh-var(--site-header-h))] max-w-[1000px] flex-col items-center justify-center px-8 py-20 text-center">
         <p className="font-display-sans text-[0.6rem] font-extrabold uppercase tracking-[0.28em] text-[#e5d0aa]">
           {page.name} · {page.discipline}
         </p>

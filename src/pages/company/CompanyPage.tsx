@@ -23,7 +23,7 @@ export function CompanyPage() {
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
       {/* Magazine system hero */}
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="grid min-h-[580px] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-8 py-16 md:px-12 xl:px-16">
             <p className="font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.22em] text-[#9a6d23]">

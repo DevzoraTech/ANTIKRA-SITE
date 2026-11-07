@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 export function NotFoundPage() {
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="mx-auto flex min-h-[70vh] max-w-[900px] flex-col justify-center px-8 py-20 md:px-12">
           <p className="font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.22em] text-[#9a6d23]">
             Error 404

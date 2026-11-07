@@ -27,7 +27,7 @@ export function VentureBuildingSolutionPage() {
         Dark cinematic hero — opposite of cream veil pages.
         Type sits in the dark; photo is atmosphere, not a left-fade clone.
       */}
-      <section className="relative isolate min-h-[100svh] overflow-hidden pt-[88px]">
+      <section className="relative isolate min-h-[100svh] overflow-hidden pt-[var(--site-header-h)]">
         <img
           src={siteImages.venture}
           alt=""
@@ -35,7 +35,7 @@ export function VentureBuildingSolutionPage() {
         />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_30%_40%,rgba(17,20,20,0.35),rgba(17,20,20,0.92)_70%)]" />
 
-        <div className="mx-auto flex min-h-[calc(100svh-88px)] w-full max-w-[1100px] flex-col justify-center px-8 py-20 text-center md:px-12">
+        <div className="mx-auto flex min-h-[calc(100svh-var(--site-header-h))] w-full max-w-[1100px] flex-col justify-center px-8 py-20 text-center md:px-12">
           <p className="font-display-sans text-[0.6rem] font-extrabold uppercase tracking-[0.28em] text-[#e5d0aa]">
             Venture Building
           </p>

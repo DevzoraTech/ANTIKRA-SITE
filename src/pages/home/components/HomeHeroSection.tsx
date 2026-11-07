@@ -1,38 +1,37 @@
 import { ArrowRight, MapPin } from "lucide-react"
-import heroImg from "../../../assets/home/hero.png"
+import heroImg from "../../../assets/home/hero.jpg"
 
 export function HomeHeroSection() {
   return (
-    <section className="relative isolate min-h-[608px] overflow-hidden border-b border-black/10 bg-[#f8f2e9] pt-[88px] md:min-h-[663px]">
-      <img
-        src={heroImg}
-        alt="ANTIKRA technology team presenting a connected product system"
-        className="home-hero-image absolute inset-x-0 top-[88px] -z-20 h-[calc(100%-88px)] w-full object-cover object-center"
-      />
-      {/* Desktop: soft left veil so type sits on atmosphere, not on a card */}
-      <div className="absolute inset-x-0 bottom-0 top-[88px] -z-10 hidden bg-[linear-gradient(90deg,#f8f2e9_0%,rgba(248,242,233,0.97)_22%,rgba(248,242,233,0.7)_34%,rgba(248,242,233,0.28)_48%,rgba(248,242,233,0.06)_61%,rgba(248,242,233,0)_72%)] md:block" />
-      <div className="absolute bottom-0 left-[24%] top-[88px] -z-10 hidden w-[26%] bg-[linear-gradient(90deg,rgba(248,242,233,0),rgba(248,242,233,0.24),rgba(248,242,233,0))] blur-2xl md:block" />
-      {/* Mobile: bottom-weighted veil — keeps the building visible, type readable */}
-      <div className="absolute inset-x-0 bottom-0 top-[88px] -z-10 bg-[linear-gradient(180deg,rgba(248,242,233,0.55)_0%,rgba(248,242,233,0.82)_38%,rgba(248,242,233,0.96)_72%,#f8f2e9_100%)] md:hidden" />
+    <section className="relative isolate overflow-hidden border-b border-black/10 bg-[#f8f2e9]">
+      {/* Mobile: dedicated image band. Desktop: full-bleed under the copy. */}
+      <div className="relative mt-[var(--site-header-h)] h-[min(38vh,300px)] w-full md:absolute md:inset-0 md:mt-0 md:h-full">
+        <img
+          src={heroImg}
+          alt="ANTIKRA engineers monitoring production systems on the plant floor"
+          className="home-hero-image absolute inset-0 h-full w-full object-cover object-[50%_34%] md:object-[60%_48%]"
+        />
+        <div className="pointer-events-none absolute inset-0 hidden bg-[linear-gradient(90deg,#f8f2e9_0%,rgba(248,242,233,0.97)_18%,rgba(248,242,233,0.55)_30%,rgba(248,242,233,0.12)_42%,rgba(248,242,233,0)_54%)] md:block" />
+      </div>
 
-      <div className="mx-auto flex min-h-[520px] w-full max-w-[1500px] items-center px-8 py-14 md:min-h-[575px] md:px-12 xl:px-[72px]">
-        <div className="home-hero-copy w-full max-w-[505px]">
-          <p className="font-display-sans text-[0.64rem] font-extrabold uppercase tracking-[0.2em] text-[#a1742e]">
+      <div className="relative mx-auto flex w-full max-w-[1500px] flex-col px-6 pb-9 pt-6 md:min-h-[740px] md:justify-center md:px-12 md:pb-14 md:pt-[var(--site-header-h)] xl:px-[72px]">
+        <div className="home-hero-copy w-full max-w-[480px]">
+          <p className="font-display-sans text-[0.62rem] font-extrabold uppercase tracking-[0.2em] text-[#a1742e]">
             Global Technology Group&nbsp;&nbsp;•&nbsp;&nbsp;Kampala
           </p>
-          <h1 className="mt-5 font-display text-[4.3rem] font-semibold leading-[0.9] tracking-[-0.035em] text-[#16110f] md:text-[5.35rem] xl:text-[6.3rem]">
+          <h1 className="mt-4 font-display text-[3.15rem] font-semibold leading-[0.92] tracking-[-0.035em] text-[#16110f] sm:text-[3.6rem] md:mt-5 md:text-[5.35rem] xl:text-[6.3rem]">
             Technology,
             <br />
             built as a
             <br />
             <span className="text-[#9f742f]">system.</span>
           </h1>
-          <div className="mt-6 h-px w-9 origin-left bg-[#9f742f]" />
-          <p className="mt-5 max-w-[405px] text-[0.86rem] leading-[1.55] text-[#1d1d1d]/70 md:text-[0.95rem]">
+          <div className="mt-5 h-px w-9 origin-left bg-[#9f742f] md:mt-6" />
+          <p className="mt-4 max-w-[390px] text-[0.92rem] leading-[1.55] text-[#1d1d1d]/78 md:mt-5 md:text-[0.95rem]">
             We design, engineer and operate digital products, technology
             infrastructure and companies built for complex environments.
           </p>
-          <div className="mt-7 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-3 md:mt-7">
             <a
               href="/products"
               className="home-hero-cta-primary inline-flex h-10 items-center justify-center gap-5 bg-[#9a6d23] px-5 font-display-sans text-[0.66rem] font-extrabold uppercase tracking-[0.04em] text-white shadow-[0_14px_32px_rgba(61,42,15,0.18)] transition-colors hover:bg-[#7f5819]"
@@ -48,13 +47,13 @@ export function HomeHeroSection() {
               <ArrowRight className="h-3.5 w-3.5" strokeWidth={1.7} />
             </a>
           </div>
-          <div className="mt-7 flex flex-wrap items-center gap-4 font-display-sans text-[0.62rem] font-bold uppercase tracking-[0.16em] text-[#1e1e1e]/55">
+          <div className="mt-6 flex flex-wrap items-center gap-3 font-display-sans text-[0.62rem] font-bold uppercase tracking-[0.16em] text-[#1e1e1e]/55 md:mt-7 md:gap-4">
             <span className="flex items-center gap-2">
               <MapPin className="h-3.5 w-3.5 text-[#9a6d23]" strokeWidth={1.8} />
               Kampala, Uganda
             </span>
-            <span className="h-3 w-px bg-black/25" />
-            <span className="normal-case tracking-[0.02em]">
+            <span className="hidden h-3 w-px bg-black/25 sm:block" />
+            <span className="hidden normal-case tracking-[0.02em] sm:inline">
               Global reach. Operations including Kampala, Uganda.
             </span>
           </div>

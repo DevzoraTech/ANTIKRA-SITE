@@ -27,7 +27,7 @@ export function CareersPage() {
 
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
-      <section className="relative isolate overflow-hidden border-b border-black/10 pt-[88px]">
+      <section className="relative isolate overflow-hidden border-b border-black/10 pt-[var(--site-header-h)]">
         <img
           src={siteImages.studio}
           alt=""

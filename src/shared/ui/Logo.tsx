@@ -8,10 +8,10 @@ interface LogoProps {
 }
 
 const sizeMap = {
-  sm: { mark: 32, image: 36 },
-  md: { mark: 40, image: 48 },
-  lg: { mark: 56, image: 68 },
-  xl: { mark: 80, image: 88 },
+  sm: { mark: 28, image: 32 },
+  md: { mark: 36, image: 40 },
+  lg: { mark: 48, image: 52 },
+  xl: { mark: 72, image: 80 },
 }
 
 const SPOKES = [0, 45, 90, 135, 180, 225, 270, 315]
@@ -209,6 +209,7 @@ export function Logo({
   return (
     <span
       className={`inline-flex shrink-0 items-center justify-center ${className}`}
+      style={{ width: dims.image, height: dims.image }}
       aria-label="ANTIKRA"
     >
       <img
@@ -216,7 +217,7 @@ export function Logo({
         alt=""
         width={dims.image}
         height={dims.image}
-        className="block object-contain"
+        className="block h-full w-full object-contain"
       />
     </span>
   )

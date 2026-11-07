@@ -79,9 +79,9 @@ export function ConsoleGatePage({ onAuthenticated }: { onAuthenticated: (session
 
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
-      <section className="relative isolate min-h-[100svh] overflow-hidden border-b border-black/10 bg-[#111414] pt-[88px] text-white">
+      <section className="relative isolate min-h-[100svh] overflow-hidden border-b border-black/10 bg-[#111414] pt-[var(--site-header-h)] text-white">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_30%_35%,rgba(168,113,26,0.18),transparent_55%)]" />
-        <div className="mx-auto flex min-h-[calc(100svh-88px)] max-w-[820px] flex-col items-center justify-center px-8 py-20 text-center">
+        <div className="mx-auto flex min-h-[calc(100svh-var(--site-header-h))] max-w-[820px] flex-col items-center justify-center px-8 py-20 text-center">
           <p className="font-display-sans text-[0.6rem] font-extrabold uppercase tracking-[0.28em] text-[#e5d0aa]">ANTIKRA Console</p>
           <h1 className="mt-8 font-display text-[3.4rem] font-semibold leading-[0.95] tracking-[-0.035em] md:text-[4.6rem]">{consoleGate.lead}</h1>
           <p className="mt-8 max-w-[480px] text-[1rem] leading-[1.65] text-white/75">{consoleGate.summary}</p>

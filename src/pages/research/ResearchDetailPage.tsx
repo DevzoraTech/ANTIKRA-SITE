@@ -14,7 +14,7 @@ export function ResearchDetailPage({ publication }: { publication: ResearchPubli
 
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
-      <article className="border-b border-black/10 pt-[88px]">
+      <article className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="mx-auto max-w-[820px] px-8 py-16 md:px-12">
           <p className="font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.22em] text-[#9a6d23]">
             ANTIKRA / Research

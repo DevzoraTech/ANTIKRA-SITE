@@ -7,7 +7,7 @@ export function CompanyDetailHeroSection({ page }: { page: CompanyPageContent })
   const styles = accentStyles[page.accent]
 
   return (
-    <section className="border-b border-black/10 bg-[#fffdfa] pt-[88px]">
+    <section className="border-b border-black/10 bg-[#fffdfa] pt-[var(--site-header-h)]">
       <div className="mx-auto grid min-h-[430px] w-full max-w-[1460px] items-center gap-8 px-7 py-12 md:px-10 lg:grid-cols-[0.72fr_1fr] lg:px-14 lg:py-10">
         <div>
           <p className={`font-display-sans text-[0.68rem] font-bold uppercase tracking-[0.42em] ${styles.text}`}>

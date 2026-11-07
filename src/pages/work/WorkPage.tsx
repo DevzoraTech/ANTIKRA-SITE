@@ -27,7 +27,7 @@ const visualMap = {
 export function WorkPage() {
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
-      <section className="border-b border-black/10 pt-[88px]">
+      <section className="border-b border-black/10 pt-[var(--site-header-h)]">
         <div className="mx-auto max-w-[1500px] px-8 py-16 md:px-12 xl:px-[72px]">
           <p className="font-display-sans text-[0.58rem] font-extrabold uppercase tracking-[0.22em] text-[#9a6d23]">
             ANTIKRA · Work
@@ -100,7 +100,7 @@ export function WorkDetailPage({ study }: { study: WorkCaseStudy }) {
 
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
-      <section className="relative isolate min-h-[520px] overflow-hidden border-b border-black/10 pt-[88px]">
+      <section className="relative isolate min-h-[520px] overflow-hidden border-b border-black/10 pt-[var(--site-header-h)]">
         <img
           src={visualMap[study.visual]}
           alt=""

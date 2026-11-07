@@ -46,14 +46,14 @@ export function ProductDetailPage({
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
       {/* Hero */}
-      <section className="relative isolate min-h-[640px] overflow-hidden border-b border-black/10 bg-[#f8f2e9] pt-[88px] md:min-h-[680px]">
+      <section className="relative isolate min-h-[640px] overflow-hidden border-b border-black/10 bg-[#f8f2e9] pt-[var(--site-header-h)] md:min-h-[680px]">
         <img
           src={image}
           alt={`${product.name} operating environment`}
-          className="absolute inset-x-0 top-[88px] -z-20 h-[calc(100%-88px)] w-full object-cover object-[60%_48%]"
+          className="absolute inset-x-0 top-[var(--site-header-h)] -z-20 h-[calc(100%-var(--site-header-h))] w-full object-cover object-[60%_48%]"
         />
-        <div className="absolute inset-x-0 bottom-0 top-[88px] -z-10 hidden bg-[linear-gradient(90deg,#f8f2e9_0%,rgba(248,242,233,0.97)_24%,rgba(248,242,233,0.72)_40%,rgba(248,242,233,0.28)_56%,rgba(248,242,233,0)_74%)] md:block" />
-        <div className="absolute inset-x-0 bottom-0 top-[88px] -z-10 bg-[linear-gradient(180deg,rgba(248,242,233,0.5)_0%,rgba(248,242,233,0.88)_50%,#f8f2e9_100%)] md:hidden" />
+        <div className="absolute inset-x-0 bottom-0 top-[var(--site-header-h)] -z-10 hidden bg-[linear-gradient(90deg,#f8f2e9_0%,rgba(248,242,233,0.97)_24%,rgba(248,242,233,0.72)_40%,rgba(248,242,233,0.28)_56%,rgba(248,242,233,0)_74%)] md:block" />
+        <div className="absolute inset-x-0 bottom-0 top-[var(--site-header-h)] -z-10 bg-[linear-gradient(180deg,rgba(248,242,233,0.5)_0%,rgba(248,242,233,0.88)_50%,#f8f2e9_100%)] md:hidden" />
 
         <div className="mx-auto flex min-h-[552px] w-full max-w-[1500px] items-center px-8 py-14 md:min-h-[592px] md:px-12 xl:px-[72px]">
           <div className="w-full max-w-[560px]">
