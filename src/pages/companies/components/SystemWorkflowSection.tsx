@@ -41,7 +41,7 @@ export function SystemWorkflowSection() {
           </h2>
           <p className="mt-5 max-w-[250px] text-[0.8rem] leading-[1.55] text-[#161616]/58">
             Work moves through a shared sequence. Different ANTIKRA companies
-            own different stages — independently or as a coordinated system.
+            own different stages, independently or as a coordinated system.
           </p>
           <a
             href="/company"

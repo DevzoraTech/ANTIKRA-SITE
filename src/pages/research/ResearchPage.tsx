@@ -83,7 +83,7 @@ export function ResearchPage() {
                   "Financial Systems",
                   "Mobility",
                   "Security & Trust",
-                  "Human–Technology",
+                  "Human-Technology",
                 ].map((label) => (
                   <li key={label} className="font-display text-[1.05rem] font-semibold text-white">
                     {label}

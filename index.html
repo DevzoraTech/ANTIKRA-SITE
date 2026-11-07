@@ -7,11 +7,11 @@
     <title>ANTIKRA | Global Technology Group</title>
     <meta
       name="description"
-      content="ANTIKRA is a global technology group designing, engineering and operating products, infrastructure and companies for complex environments—with operations including Kampala, Uganda."
+      content="ANTIKRA is a global technology group designing, engineering and operating products, infrastructure and companies for complex environments, with operations including Kampala, Uganda."
     />
     <meta
       name="keywords"
-      content="ANTIKRA, ANTIKRA Group, global technology group, product engineering, cloud infrastructure, AI data systems, cybersecurity, experience design, venture building, Rembeh, Carmie, Mechanism, Cosmos, Orrery, Astra, Helios, Olympia, Kampala, Uganda, Africa technology"
+      content="ANTIKRA, ANTIKRA Group, global technology group, product engineering, cloud infrastructure, AI data systems, cybersecurity, experience design, venture building, Rembeh, Carmie, Mechanism, Cosmos, Orrery, Astra, Helios, Olympia, Kampala, Uganda, Africa technology, Mpango Hamza Rahman, Kapeere Bonny, ANTIKRA leadership, ANTIKRA founders"
     />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="ANTIKRA Group" />
@@ -44,7 +44,7 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1254" />
     <meta property="og:image:height" content="1254" />
-    <meta property="og:image:alt" content="ANTIKRA — Global technology group" />
+    <meta property="og:image:alt" content="ANTIKRA: Global technology group" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="en_GB" />
     <meta property="og:locale:alternate" content="en_UG" />
@@ -58,7 +58,7 @@
       content="A global technology group building products, infrastructure and companies for complex environments."
     />
     <meta name="twitter:image" content="https://antikra.com/antikra-logo.png" />
-    <meta name="twitter:image:alt" content="ANTIKRA — Global technology group" />
+    <meta name="twitter:image:alt" content="ANTIKRA: Global technology group" />
     <meta name="twitter:domain" content="antikra.com" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -71,6 +71,9 @@
     <link rel="apple-touch-icon" href="/antikra-logo.png" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="llms-full.txt" href="/llms-full.txt" />
+    <link rel="alternate" type="application/ld+json" title="ANTIKRA brand entity" href="/brand.json" />
 
     <link rel="alternate" hreflang="en" href="https://antikra.com/" />
     <link rel="alternate" hreflang="en-ug" href="https://antikra.com/" />
@@ -95,10 +98,25 @@
             "contentUrl": "https://antikra.com/antikra-logo.png",
             "width": 1254,
             "height": 1254,
-            "caption": "ANTIKRA"
+            "caption": "ANTIKRA logo",
+            "name": "ANTIKRA logo",
+            "encodingFormat": "image/png"
           },
-          "image": "https://antikra.com/antikra-logo.png",
+          "image": [
+            "https://antikra.com/antikra-logo.png",
+            "https://antikra.com/leadership/mpango-hamza.jpg",
+            "https://antikra.com/leadership/kapeere-bonny.jpg"
+          ],
+          "brand": { "@id": "https://antikra.com/#brand" },
           "foundingDate": "2024",
+          "founder": [
+            { "@id": "https://antikra.com/company/leadership#mpango-hamza" },
+            { "@id": "https://antikra.com/company/leadership#kapeere-bonny" }
+          ],
+          "employee": [
+            { "@id": "https://antikra.com/company/leadership#mpango-hamza" },
+            { "@id": "https://antikra.com/company/leadership#kapeere-bonny" }
+          ],
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Kampala",
@@ -139,11 +157,55 @@
           }
         },
         {
+          "@type": "Brand",
+          "@id": "https://antikra.com/#brand",
+          "name": "ANTIKRA",
+          "alternateName": ["ANTIKRA Group", "Antikra"],
+          "url": "https://antikra.com",
+          "logo": "https://antikra.com/antikra-logo.png",
+          "slogan": "Technology, built as a system.",
+          "description": "ANTIKRA is the brand of ANTIKRA Group, a global technology organization of six specialist companies."
+        },
+        {
+          "@type": "Person",
+          "@id": "https://antikra.com/company/leadership#mpango-hamza",
+          "name": "Mpango Hamza Rahman",
+          "jobTitle": "Founder, Chairman & Director",
+          "description": "Shapes group strategy, venture direction and institutional design, ensuring ANTIKRA compounds as a long-term technology system rather than a collection of projects.",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://antikra.com/leadership/mpango-hamza.jpg",
+            "contentUrl": "https://antikra.com/leadership/mpango-hamza.jpg",
+            "caption": "Mpango Hamza Rahman, Founder, Chairman & Director at ANTIKRA"
+          },
+          "url": "https://antikra.com/company/leadership#mpango-hamza",
+          "worksFor": { "@id": "https://antikra.com/#organization" },
+          "knowsAbout": ["ANTIKRA", "Technology systems", "Direction", "Product engineering", "Venture building"],
+          "homeLocation": { "@type": "Place", "name": "Kampala, Uganda" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://antikra.com/company/leadership#kapeere-bonny",
+          "name": "Kapeere Bonny",
+          "jobTitle": "Co-Founder & Director",
+          "description": "Leads product and technology direction across the ANTIKRA system, connecting specialist companies into coherent platforms, products and client engagements.",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://antikra.com/leadership/kapeere-bonny.jpg",
+            "contentUrl": "https://antikra.com/leadership/kapeere-bonny.jpg",
+            "caption": "Kapeere Bonny, Co-Founder & Director at ANTIKRA"
+          },
+          "url": "https://antikra.com/company/leadership#kapeere-bonny",
+          "worksFor": { "@id": "https://antikra.com/#organization" },
+          "knowsAbout": ["ANTIKRA", "Technology systems", "Technology", "Product engineering", "Venture building"],
+          "homeLocation": { "@type": "Place", "name": "Kampala, Uganda" }
+        },
+        {
           "@type": "WebSite",
           "@id": "https://antikra.com/#website",
           "url": "https://antikra.com",
           "name": "ANTIKRA",
-          "description": "Global technology group — companies, products, solutions, work and research.",
+          "description": "Global technology group, companies, products, solutions, work and research.",
           "publisher": { "@id": "https://antikra.com/#organization" },
           "inLanguage": "en"
         },
@@ -173,6 +235,7 @@
             { "@type": "WebPage", "name": "Work", "url": "https://antikra.com/work" },
             { "@type": "WebPage", "name": "Research", "url": "https://antikra.com/research" },
             { "@type": "WebPage", "name": "Company", "url": "https://antikra.com/company" },
+            { "@type": "WebPage", "name": "Leadership", "url": "https://antikra.com/company/leadership" },
             { "@type": "WebPage", "name": "Contact", "url": "https://antikra.com/company/contact" }
           ]
         },
@@ -221,6 +284,25 @@
               }
             }
           ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://antikra.com/#leadership",
+          "name": "ANTIKRA Leadership",
+          "url": "https://antikra.com/company/leadership",
+          "numberOfItems": 2,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": { "@id": "https://antikra.com/company/leadership#mpango-hamza" }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": { "@id": "https://antikra.com/company/leadership#kapeere-bonny" }
+            }
+          ]
         }
       ]
     }
@@ -238,7 +320,7 @@
 
     <noscript>
       <div style="font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px;">
-        <h1>ANTIKRA — Global Technology Group</h1>
+        <h1>ANTIKRA: Global Technology Group</h1>
         <p>
           ANTIKRA is a global technology group designing, engineering and operating
           products, infrastructure and companies for complex environments. Operations
@@ -246,18 +328,26 @@
         </p>
         <h2>Companies</h2>
         <ul>
-          <li><a href="/companies/mechanism">Mechanism</a> — Product Engineering</li>
-          <li><a href="/companies/cosmos">Cosmos</a> — Cloud &amp; Infrastructure</li>
-          <li><a href="/companies/orrery">Orrery</a> — AI &amp; Data</li>
-          <li><a href="/companies/astra">Astra</a> — Cybersecurity</li>
-          <li><a href="/companies/helios">Helios</a> — Experience &amp; Design</li>
-          <li><a href="/companies/olympia">Olympia</a> — Ventures</li>
+          <li><a href="/companies/mechanism">Mechanism</a> Product Engineering</li>
+          <li><a href="/companies/cosmos">Cosmos</a> Cloud &amp; Infrastructure</li>
+          <li><a href="/companies/orrery">Orrery</a> AI &amp; Data</li>
+          <li><a href="/companies/astra">Astra</a> Cybersecurity</li>
+          <li><a href="/companies/helios">Helios</a> Experience &amp; Design</li>
+          <li><a href="/companies/olympia">Olympia</a> Ventures</li>
         </ul>
         <h2>Products</h2>
         <ul>
           <li><a href="/products/rembeh">Rembeh</a></li>
           <li><a href="/products/carmie">Carmie</a></li>
         </ul>
+        <h2>Leadership</h2>
+        <ul>
+          <li><a href="/company/leadership#mpango-hamza">Mpango Hamza Rahman</a> Founder, Chairman &amp; Director</li>
+          <li><a href="/company/leadership#kapeere-bonny">Kapeere Bonny</a> Co-Founder &amp; Director</li>
+        </ul>
+        <p>
+          <img src="/antikra-logo.png" alt="ANTIKRA logo" width="96" height="96" />
+        </p>
         <p><a href="/company/contact">Contact ANTIKRA</a></p>
       </div>
     </noscript>

@@ -14,7 +14,7 @@ export function ExperienceDesignSolutionPage() {
   return (
     <div className="bg-[#f8f2e9] text-[#141414]">
       {/*
-        Magazine split — solid type plane LEFT, unobstructed photo RIGHT.
+        Magazine split, solid type plane LEFT, unobstructed photo RIGHT.
         Not the home left-veil-over-image hero.
       */}
       <section className="border-b border-black/10 pt-[var(--site-header-h)]">
@@ -48,17 +48,17 @@ export function ExperienceDesignSolutionPage() {
         </div>
       </section>
 
-      {/* Opening line — thin, not a second dark manifesto clone */}
+      {/* Opening line, thin, not a second dark manifesto clone */}
       <section className="border-b border-black/10 bg-[#f4eee5]">
         <div className="mx-auto max-w-[1500px] px-8 py-10 md:px-12 xl:px-[72px]">
           <p className="max-w-[720px] font-display text-[1.85rem] font-semibold leading-[1.25] tracking-[-0.02em] text-[#15110f] md:text-[2.15rem]">
-            Design is not decoration — it is how complex technology becomes
+            Design is not decoration; it is how complex technology becomes
             something people can actually use.
           </p>
         </div>
       </section>
 
-      {/* Design path — list + detail */}
+      {/* Design path, list + detail */}
       <section id="design-path" className="border-b border-black/10 bg-[#fbf8f1]">
         <div className="mx-auto w-full max-w-[1500px] px-8 py-14 md:px-12 md:py-16 xl:px-[72px]">
           <h2 className="max-w-[420px] font-display text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.02em] text-[#15110f]">
@@ -147,7 +147,7 @@ export function ExperienceDesignSolutionPage() {
         </div>
       </section>
 
-      {/* Work — image top, solid text */}
+      {/* Work, image top, solid text */}
       <section className="border-b border-black/10 bg-[#fbf8f1]">
         <div className="mx-auto w-full max-w-[1500px] px-8 py-14 md:px-12 md:py-16 xl:px-[72px]">
           <h2 className="font-display text-[2.2rem] font-semibold text-[#15110f]">

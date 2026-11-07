@@ -30,7 +30,7 @@ export const workCaseStudies: WorkCaseStudy[] = [
     category: "Automotive Services",
     summary: "Infrastructure connecting vehicle owners with garages and towing providers.",
     problem:
-      "Automotive service demand was fragmented—owners, garages and tow providers lacked a reliable operating layer between them.",
+      "Automotive service demand was fragmented: owners, garages and tow providers lacked a reliable operating layer between them.",
     approach:
       "Olympia led venture formation while Mechanism, Cosmos, Helios and Astra engineered product, experience, infrastructure and security into one service platform.",
     outcome:

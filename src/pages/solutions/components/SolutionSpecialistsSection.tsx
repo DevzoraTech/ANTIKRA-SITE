@@ -40,7 +40,7 @@ export function SolutionSpecialistsSection() {
             </h2>
             <p className="mt-5 max-w-[420px] text-[0.88rem] leading-[1.58] text-white/58">
               Each solution is delivered through the specialist companies that
-              own the discipline — coordinated as one system when the problem
+              own the discipline, coordinated as one system when the problem
               requires more than one.
             </p>
           </div>

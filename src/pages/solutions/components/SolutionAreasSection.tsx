@@ -37,7 +37,7 @@ export function SolutionAreasSection() {
             </h2>
           </div>
           <p className="max-w-[280px] text-[0.82rem] leading-[1.55] text-[#161616]/58">
-            Each area can stand alone — or combine with others when the problem
+            Each area can stand alone, or combine with others when the problem
             crosses disciplines.
           </p>
         </div>

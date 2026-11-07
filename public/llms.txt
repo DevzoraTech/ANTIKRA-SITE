@@ -2,6 +2,16 @@
 
 > ANTIKRA is a global technology group designing, engineering and operating digital products, technology infrastructure and companies for complex environments. Its operating base is Kampala, Uganda, and it serves organizations internationally.
 
+Preferred name: ANTIKRA
+
+Also known as: ANTIKRA Group, Antikra
+
+Official logo: https://antikra.com/antikra-logo.png
+
+Brand assets and entity reference: https://antikra.com/brand.json
+
+Slogan: Technology, built as a system.
+
 ANTIKRA combines six specialist companies as one coordinated technology system:
 
 - [Mechanism](https://antikra.com/companies/mechanism): product engineering and software systems.
@@ -10,6 +20,15 @@ ANTIKRA combines six specialist companies as one coordinated technology system:
 - [Astra](https://antikra.com/companies/astra): cybersecurity across applications, infrastructure and data.
 - [Helios](https://antikra.com/companies/helios): experience design, product design and design systems.
 - [Olympia](https://antikra.com/companies/olympia): technology venture building.
+
+## Leadership
+
+Canonical page: https://antikra.com/company/leadership
+
+- [Mpango Hamza Rahman](https://antikra.com/company/leadership#mpango-hamza): Founder, Chairman & Director. Portrait: https://antikra.com/leadership/mpango-hamza.jpg
+- [Kapeere Bonny](https://antikra.com/company/leadership#kapeere-bonny): Co-Founder & Director. Portrait: https://antikra.com/leadership/kapeere-bonny.jpg
+
+Mpango Hamza Rahman shapes group strategy, venture direction and institutional design. Kapeere Bonny leads product and technology direction across the ANTIKRA system.
 
 ## Primary pages
 
@@ -20,6 +39,7 @@ ANTIKRA combines six specialist companies as one coordinated technology system:
 - [Selected work](https://antikra.com/work)
 - [Research](https://antikra.com/research)
 - [Company profile](https://antikra.com/company)
+- [Leadership](https://antikra.com/company/leadership)
 - [Contact ANTIKRA](https://antikra.com/company/contact)
 
 ## Products
@@ -27,4 +47,10 @@ ANTIKRA combines six specialist companies as one coordinated technology system:
 - [Rembeh](https://antikra.com/products/rembeh): financial operations infrastructure for lending businesses.
 - [Carmie](https://antikra.com/products/carmie): infrastructure for the automotive service economy.
 
-For a fuller company and capability reference, see [llms-full.txt](https://antikra.com/llms-full.txt).
+## Visual identity
+
+- Logo (PNG, 1254×1254): https://antikra.com/antikra-logo.png
+- Favicon: https://antikra.com/favicon.svg
+- Web app manifest: https://antikra.com/manifest.json
+
+For a fuller company, leadership and capability reference, see [llms-full.txt](https://antikra.com/llms-full.txt).

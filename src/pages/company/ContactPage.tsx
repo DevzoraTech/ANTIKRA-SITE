@@ -68,8 +68,8 @@ export function ContactPage() {
               Start with what you’re trying to accomplish.
             </h1>
             <p className="mt-6 max-w-[440px] text-[0.95rem] leading-[1.6] text-[#2c2824]">
-              Tell us what you need—a product, infrastructure, a venture, research
-              collaboration, or a partnership—and we’ll connect you with the right
+              Tell us what you need: a product, infrastructure, a venture, research
+              collaboration, or a partnership, and we’ll connect you with the right
               team.
             </p>
             <a
@@ -276,7 +276,7 @@ export function ContactPage() {
       <section className="bg-[#111414] text-white">
         <div className="mx-auto flex max-w-[1500px] flex-col gap-6 px-8 py-14 md:flex-row md:items-end md:justify-between md:px-12 xl:px-[72px]">
           <p className="max-w-[560px] font-display text-[1.8rem] font-semibold leading-[1.15]">
-            Not sure where your enquiry belongs? Tell us what you’re trying to accomplish—we’ll route it.
+            Not sure where your enquiry belongs? Tell us what you’re trying to accomplish. We'll route it.
           </p>
           <a
             href="#enquiry"

@@ -27,6 +27,12 @@
       "url": "/companies"
     },
     {
+      "name": "Leadership",
+      "short_name": "Leadership",
+      "description": "Mpango Hamza Rahman and Kapeere Bonny",
+      "url": "/company/leadership"
+    },
+    {
       "name": "Products",
       "short_name": "Products",
       "description": "Rembeh, Carmie and ANTIKRA products",

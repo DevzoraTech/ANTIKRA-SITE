@@ -14,7 +14,7 @@ import { companyCards } from "../antikra"
 export const companyAbout: CompanyAboutContent = {
   lead: "Built as a system, not a conventional technology company.",
   summary:
-    "ANTIKRA brings specialist companies together so complex problems can be solved as one coordinated system—products, client systems, ventures and research.",
+    "ANTIKRA brings specialist companies together so complex problems can be solved as one coordinated system: products, client systems, ventures and research.",
   whyTitle: "Why ANTIKRA exists",
   whyDescription:
     "Serious technology problems rarely sit inside a single discipline. ANTIKRA exists so engineering, infrastructure, intelligence, security, design and venture capability can move together.",
@@ -46,7 +46,7 @@ export const companyAbout: CompanyAboutContent = {
     {
       id: "products",
       title: "Products",
-      description: "Technology ANTIKRA owns and operates—starting with Rembeh and Carmie.",
+      description: "Technology ANTIKRA owns and operates, starting with Rembeh and Carmie.",
       href: "/products",
     },
     {
@@ -110,25 +110,13 @@ export const companyAbout: CompanyAboutContent = {
 
 export const leadershipProfiles: LeadershipProfile[] = [
   {
-    id: "kapeere-bonny",
-    name: "Kapeere Bonny",
-    title: "Co-Founder & Director",
-    bio: "Leads product and technology direction across the ANTIKRA system—connecting specialist companies into coherent platforms, products and client engagements.",
-    responsibilities: [
-      "Product and technology strategy",
-      "System architecture direction",
-      "Delivery standards across companies",
-      "Product portfolio oversight",
-    ],
-    systemRole: "Technology",
-    systemRoleLabel: "How the system is engineered",
-    linkedin: "https://linkedin.com",
-  },
-  {
     id: "mpango-hamza",
     name: "Mpango Hamza Rahman",
     title: "Founder, Chairman & Director",
-    bio: "Shapes group strategy, venture direction and institutional design—ensuring ANTIKRA compounds as a long-term technology system rather than a collection of projects.",
+    shortTitle: "Founder & Chairman",
+    bio: "Shapes group strategy, venture direction and institutional design, ensuring ANTIKRA compounds as a long-term technology system rather than a collection of projects.",
+    focus:
+      "Builds the conditions for ANTIKRA to endure: clear direction, serious ownership, and institutions that can carry complex technology work.",
     responsibilities: [
       "Group strategy",
       "Venture and portfolio direction",
@@ -137,9 +125,46 @@ export const leadershipProfiles: LeadershipProfile[] = [
     ],
     systemRole: "Direction",
     systemRoleLabel: "Where the system is headed",
-    linkedin: "https://linkedin.com",
+    portrait: "mpango-hamza",
+  },
+  {
+    id: "kapeere-bonny",
+    name: "Kapeere Bonny",
+    title: "Co-Founder & Director",
+    shortTitle: "Co-Founder & Director",
+    bio: "Leads product and technology direction across the ANTIKRA system, connecting specialist companies into coherent platforms, products and client engagements.",
+    focus:
+      "Turns strategy into working systems: architecture, delivery standards, and the product craft that keeps ANTIKRA honest in production.",
+    responsibilities: [
+      "Product and technology strategy",
+      "System architecture direction",
+      "Delivery standards across companies",
+      "Product portfolio oversight",
+    ],
+    systemRole: "Technology",
+    systemRoleLabel: "How the system is engineered",
+    portrait: "kapeere-bonny",
   },
 ]
+
+export const leadershipPage = {
+  eyebrow: "ANTIKRA / Leadership",
+  brand: "ANTIKRA",
+  headline: "People who hold the system together.",
+  summary:
+    "Direction and technology leadership for a group built to engineer products, infrastructure and companies as one coordinated system.",
+  foundersLabel: "Founders",
+  foundersLead: "Two seats. One operating system.",
+  foundersSummary:
+    "ANTIKRA is led by founders who stay close to strategy and craft, so the group compounds with clear ownership, not fragmented vendors.",
+  systemTitle: "How leadership moves through ANTIKRA",
+  systemSummary:
+    "Direction sets the course. Specialist companies execute. Products and ventures carry the work into the world. Evidence feeds the next cycle.",
+  principlesTitle: "What we hold ourselves to",
+  ctaTitle: "Build consequential technology with us.",
+  ctaLabel: "Explore careers",
+  ctaHref: "/company/careers",
+}
 
 export const leadershipPrinciples: PrincipleItem[] = [
   {
@@ -197,7 +222,7 @@ export const careersWhy: CareerWhyItem[] = [
   {
     id: "ownership",
     title: "Own meaningful problems",
-    description: "High ownership of consequential problems—not slideware theatre.",
+    description: "High ownership of consequential problems, not slideware theatre.",
   },
   {
     id: "uganda",

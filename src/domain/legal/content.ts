@@ -64,7 +64,7 @@ export const privacyPolicy: LegalPageContent = {
       id: "sharing",
       title: "Sharing",
       paragraphs: [
-        "We do not sell personal information. We may share information with service providers who help us operate email, hosting, security or analytics—under confidentiality obligations—or when required by law.",
+        "We do not sell personal information. We may share information with service providers who help us operate email, hosting, security or analytics under confidentiality obligations, or when required by law.",
       ],
     },
     {
@@ -177,7 +177,7 @@ export const termsOfUse: LegalPageContent = {
       id: "disclaimer",
       title: "Disclaimer",
       paragraphs: [
-        "The site and materials are provided “as is” and “as available” without warranties of any kind, express or implied, to the fullest extent permitted by law—including merchantability, fitness for a particular purpose and non-infringement.",
+        "The site and materials are provided “as is” and “as available” without warranties of any kind, express or implied, to the fullest extent permitted by law, including merchantability, fitness for a particular purpose and non-infringement.",
       ],
     },
     {

@@ -14,7 +14,7 @@ export function ProductPrinciplesSection() {
             </h2>
           </div>
           <p className="max-w-[380px] text-[0.86rem] leading-[1.58] text-[#161616]/62 md:justify-self-end">
-            ANTIKRA products exist to carry operational load — not to showcase
+            ANTIKRA products exist to carry operational load, not to showcase
             technology for its own sake.
           </p>
         </div>

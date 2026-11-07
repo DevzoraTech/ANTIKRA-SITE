@@ -83,7 +83,7 @@ function SolutionHero({
 }) {
   const visual = page.visual
 
-  // Engineering — solid type plane + photo half (magazine)
+  // Engineering, solid type plane + photo half (magazine)
   if (visual === "engineering") {
     return (
       <section className="border-b border-black/10 pt-[var(--site-header-h)]">
@@ -113,7 +113,7 @@ function SolutionHero({
     )
   }
 
-  // Cloud — photo banner on top, then solid content block (stacked, no overlay)
+  // Cloud, photo banner on top, then solid content block (stacked, no overlay)
   if (visual === "cloud") {
     return (
       <section className="border-b border-black/10 pt-[var(--site-header-h)]">
@@ -147,7 +147,7 @@ function SolutionHero({
     )
   }
 
-  // AI — centered editorial over darkened image
+  // AI, centered editorial over darkened image
   if (visual === "ai") {
     return (
       <section className="relative isolate min-h-[620px] overflow-hidden border-b border-black/10 pt-[var(--site-header-h)]">
@@ -174,7 +174,7 @@ function SolutionHero({
     )
   }
 
-  // Security — dark, left-aligned, technical
+  // Security, dark, left-aligned, technical
   if (visual === "security") {
     return (
       <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0c1218] pt-[var(--site-header-h)] text-white">
@@ -210,7 +210,7 @@ function SolutionHero({
     )
   }
 
-  // Fallback — still avoid the old left-veil formula
+  // Fallback, still avoid the old left-veil formula
   return (
     <section className="border-b border-black/10 bg-[#f8f2e9] pt-[var(--site-header-h)]">
       <div className="mx-auto max-w-[1500px] px-8 py-16 md:px-12 xl:px-[72px]">
@@ -245,7 +245,7 @@ export function SolutionDetailPage({ page }: SolutionDetailPageProps) {
     <div className="bg-[#f8f2e9] text-[#141414]">
       <SolutionHero page={page} accent={accent} heroImage={heroImage} />
 
-      {/* Signal — skip when hero already set a dark/atmospheric tone */}
+      {/* Signal, skip when hero already set a dark/atmospheric tone */}
       {!skipDarkSignal && (
       <section className="bg-[#111414] text-white">
         <div className="mx-auto grid w-full max-w-[1500px] px-8 py-11 md:grid-cols-4 md:px-12 xl:px-[72px]">
@@ -416,7 +416,7 @@ export function SolutionDetailPage({ page }: SolutionDetailPageProps) {
               <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-t border-black/10 pt-6">
                 {page.architectureNotes.map((note) => (
                   <p key={note} className="text-[0.78rem] text-[#161616]/62">
-                    <span className="mr-2 text-[#9a6d23]">—</span>
+                    <span className="mr-2 text-[#9a6d23]">·</span>
                     {note}
                   </p>
                 ))}
@@ -502,7 +502,7 @@ export function SolutionDetailPage({ page }: SolutionDetailPageProps) {
         </section>
       )}
 
-      {/* Delivered by specialists — elevated */}
+      {/* Delivered by specialists, elevated */}
       <section id="specialists" className="border-b border-black/10 bg-[#111414] text-white">
         <div className="mx-auto w-full max-w-[1500px] px-8 py-14 md:px-12 md:py-16 xl:px-[72px]">
           <div className="flex flex-wrap items-end justify-between gap-6">

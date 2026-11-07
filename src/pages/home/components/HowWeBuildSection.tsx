@@ -50,7 +50,7 @@ export function HowWeBuildSection() {
             building systems.
           </h2>
           <p className="mt-5 max-w-[220px] text-[0.78rem] leading-[1.5] text-[#161616]/55">
-            One operating sequence — from discovery through continuous
+            One operating sequence, from discovery through continuous
             operation.
           </p>
         </div>

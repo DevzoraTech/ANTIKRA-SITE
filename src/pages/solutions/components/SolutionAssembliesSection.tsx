@@ -9,7 +9,7 @@ export function SolutionAssembliesSection() {
             03 / Assembled solutions
           </p>
           <h2 className="mt-4 font-display text-[2.35rem] font-semibold leading-[1.02] tracking-[-0.025em] text-[#15110f] md:text-[2.7rem]">
-            Built around the problem — not a single service line.
+            Built around the problem, not a single service line.
           </h2>
         </div>
 

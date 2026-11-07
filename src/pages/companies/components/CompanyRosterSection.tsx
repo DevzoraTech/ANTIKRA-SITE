@@ -14,7 +14,7 @@ const accentText = {
   gold: "text-[#a8711a]",
 } as const
 
-/** Temporary stand-ins — swap when company photography lands. */
+/** Temporary stand-ins, swap when company photography lands. */
 const companyVisuals: Record<(typeof companyCards)[number]["id"], string> = {
   mechanism: rembehImg,
   cosmos: siteImages.infrastructure,
@@ -38,7 +38,7 @@ export function CompanyRosterSection() {
             </h2>
           </div>
           <p className="max-w-[280px] text-[0.82rem] leading-[1.55] text-[#161616]/58">
-            Enter any company for its discipline — or engage the group when the
+            Enter any company for its discipline, or engage the group when the
             work needs more than one.
           </p>
         </div>

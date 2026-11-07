@@ -48,6 +48,15 @@ function upsertJsonLd(id: string, data: unknown) {
 export function applyDocumentSeo(pathname: string) {
   const seo = resolveSeo(pathname)
   const url = absoluteUrl(seo.path === "/" ? "/" : seo.path)
+  const image = seo.image?.startsWith("http")
+    ? seo.image
+    : seo.image
+      ? absoluteUrl(seo.image)
+      : OG_IMAGE
+  const imageAlt = seo.imageAlt ?? "ANTIKRA: Global technology group"
+  const imageType = seo.imageType ?? "image/png"
+  const imageWidth = String(seo.imageWidth ?? 1254)
+  const imageHeight = String(seo.imageHeight ?? 1254)
 
   document.title = seo.title
 
@@ -72,19 +81,19 @@ export function applyDocumentSeo(pathname: string) {
   upsertMeta('meta[property="og:title"]', { property: "og:title" }, seo.title)
   upsertMeta('meta[property="og:description"]', { property: "og:description" }, seo.description)
   upsertMeta('meta[property="og:url"]', { property: "og:url" }, url)
-  upsertMeta('meta[property="og:image"]', { property: "og:image" }, OG_IMAGE)
-  upsertMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }, OG_IMAGE)
-  upsertMeta('meta[property="og:image:type"]', { property: "og:image:type" }, "image/png")
-  upsertMeta('meta[property="og:image:width"]', { property: "og:image:width" }, "1254")
-  upsertMeta('meta[property="og:image:height"]', { property: "og:image:height" }, "1254")
-  upsertMeta('meta[property="og:image:alt"]', { property: "og:image:alt" }, "ANTIKRA — Global technology group")
+  upsertMeta('meta[property="og:image"]', { property: "og:image" }, image)
+  upsertMeta('meta[property="og:image:secure_url"]', { property: "og:image:secure_url" }, image)
+  upsertMeta('meta[property="og:image:type"]', { property: "og:image:type" }, imageType)
+  upsertMeta('meta[property="og:image:width"]', { property: "og:image:width" }, imageWidth)
+  upsertMeta('meta[property="og:image:height"]', { property: "og:image:height" }, imageHeight)
+  upsertMeta('meta[property="og:image:alt"]', { property: "og:image:alt" }, imageAlt)
   upsertMeta('meta[property="og:locale"]', { property: "og:locale" }, "en_US")
 
   upsertMeta('meta[name="twitter:card"]', { name: "twitter:card" }, "summary_large_image")
   upsertMeta('meta[name="twitter:title"]', { name: "twitter:title" }, seo.title)
   upsertMeta('meta[name="twitter:description"]', { name: "twitter:description" }, seo.description)
-  upsertMeta('meta[name="twitter:image"]', { name: "twitter:image" }, OG_IMAGE)
-  upsertMeta('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }, "ANTIKRA — Global technology group")
+  upsertMeta('meta[name="twitter:image"]', { name: "twitter:image" }, image)
+  upsertMeta('meta[name="twitter:image:alt"]', { name: "twitter:image:alt" }, imageAlt)
   upsertMeta('meta[name="twitter:site"]', { name: "twitter:site" }, "@antikragroup")
 
   upsertJsonLd("antikra-page-jsonld", createPageJsonLd(seo))

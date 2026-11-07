@@ -195,7 +195,7 @@ export function CompanyBrandHero({ page }: { page: CompanyPageContent }) {
     )
   }
 
-  // Olympia — dark cinematic
+  // Olympia, dark cinematic
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden bg-[#111414] pt-[var(--site-header-h)] text-white">
       <img src={image} alt="" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-35" />

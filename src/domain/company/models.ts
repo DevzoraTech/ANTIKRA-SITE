@@ -22,14 +22,19 @@ export interface CompanyMetaItem {
   value: string
 }
 
+export type LeadershipPortraitKey = "mpango-hamza" | "kapeere-bonny"
+
 export interface LeadershipProfile {
   id: string
   name: string
   title: string
+  shortTitle: string
   bio: string
+  focus: string
   responsibilities: string[]
   systemRole: string
   systemRoleLabel: string
+  portrait: LeadershipPortraitKey
   linkedin?: string
 }
 

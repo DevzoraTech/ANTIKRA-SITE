@@ -52,13 +52,30 @@ function staticSeoPages(): Plugin {
           /(<meta\s+name="robots"\s+content=")[^"]*("\s*\/?>)/i,
           `$1${robots}$2`,
         )
+        const pageImage = seo.image?.startsWith('http')
+          ? seo.image
+          : seo.image
+            ? absoluteUrl(seo.image)
+            : OG_IMAGE
+        const pageImageAlt = seo.imageAlt ?? 'ANTIKRA: Global technology group'
+        const pageImageType = seo.imageType ?? 'image/png'
+        const pageImageWidth = String(seo.imageWidth ?? 1254)
+        const pageImageHeight = String(seo.imageHeight ?? 1254)
+
         html = html.replace(/(<meta\s+property="og:title"\s+content=")[^"]*("\s*\/?>)/i, `$1${escapeAttribute(seo.title)}$2`)
         html = html.replace(/(<meta\s+property="og:description"\s+content=")[^"]*("\s*\/?>)/i, `$1${escapeAttribute(seo.description)}$2`)
         html = html.replace(/(<meta\s+property="og:url"\s+content=")[^"]*("\s*\/?>)/i, `$1${canonical}$2`)
         html = html.replace(/(<meta\s+property="og:type"\s+content=")[^"]*("\s*\/?>)/i, `$1${seo.type === 'article' ? 'article' : 'website'}$2`)
-        html = html.replace(/(<meta\s+property="og:image"\s+content=")[^"]*("\s*\/?>)/i, `$1${OG_IMAGE}$2`)
+        html = html.replace(/(<meta\s+property="og:image"\s+content=")[^"]*("\s*\/?>)/i, `$1${pageImage}$2`)
+        html = html.replace(/(<meta\s+property="og:image:secure_url"\s+content=")[^"]*("\s*\/?>)/i, `$1${pageImage}$2`)
+        html = html.replace(/(<meta\s+property="og:image:type"\s+content=")[^"]*("\s*\/?>)/i, `$1${pageImageType}$2`)
+        html = html.replace(/(<meta\s+property="og:image:width"\s+content=")[^"]*("\s*\/?>)/i, `$1${pageImageWidth}$2`)
+        html = html.replace(/(<meta\s+property="og:image:height"\s+content=")[^"]*("\s*\/?>)/i, `$1${pageImageHeight}$2`)
+        html = html.replace(/(<meta\s+property="og:image:alt"\s+content=")[^"]*("\s*\/?>)/i, `$1${escapeAttribute(pageImageAlt)}$2`)
         html = html.replace(/(<meta\s+name="twitter:title"\s+content=")[^"]*("\s*\/?>)/i, `$1${escapeAttribute(seo.title)}$2`)
         html = html.replace(/(<meta\s+name="twitter:description"\s+content=")[^"]*("\s*\/?>)/i, `$1${escapeAttribute(seo.description)}$2`)
+        html = html.replace(/(<meta\s+name="twitter:image"\s+content=")[^"]*("\s*\/?>)/i, `$1${pageImage}$2`)
+        html = html.replace(/(<meta\s+name="twitter:image:alt"\s+content=")[^"]*("\s*\/?>)/i, `$1${escapeAttribute(pageImageAlt)}$2`)
         html = html.replace(
           /(<meta property="og:locale" content="en_US" \/>\s*){2}/,
           '<meta property="og:locale" content="en_US" />\n    ',

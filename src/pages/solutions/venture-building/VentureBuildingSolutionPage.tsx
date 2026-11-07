@@ -24,7 +24,7 @@ export function VentureBuildingSolutionPage() {
   return (
     <div className="bg-[#111414] text-white">
       {/*
-        Dark cinematic hero — opposite of cream veil pages.
+        Dark cinematic hero, opposite of cream veil pages.
         Type sits in the dark; photo is atmosphere, not a left-fade clone.
       */}
       <section className="relative isolate min-h-[100svh] overflow-hidden pt-[var(--site-header-h)]">
@@ -62,7 +62,7 @@ export function VentureBuildingSolutionPage() {
         </div>
       </section>
 
-      {/* Gate first — unique to venture */}
+      {/* Gate first, unique to venture */}
       <section className="border-t border-white/10 bg-[#f8f2e9] text-[#141414]">
         <div className="mx-auto max-w-[1500px] px-8 py-16 md:px-12 xl:px-[72px]">
           <div className="max-w-[560px]">
@@ -94,7 +94,7 @@ export function VentureBuildingSolutionPage() {
         </div>
       </section>
 
-      {/* Journey — horizontal stages on cream */}
+      {/* Journey, horizontal stages on cream */}
       <section id="venture-journey" className="bg-[#f4eee5] text-[#141414]">
         <div className="mx-auto max-w-[1500px] px-8 py-16 md:px-12 xl:px-[72px]">
           <h2 className="font-display text-[2.4rem] font-semibold tracking-[-0.02em]">
@@ -128,7 +128,7 @@ export function VentureBuildingSolutionPage() {
         </div>
       </section>
 
-      {/* Venture shapes — 2x2 large */}
+      {/* Venture shapes, 2x2 large */}
       <section className="bg-[#f8f2e9] text-[#141414]">
         <div className="mx-auto max-w-[1500px] px-8 py-16 md:px-12 xl:px-[72px]">
           <h2 className="max-w-[480px] font-display text-[2.3rem] font-semibold tracking-[-0.02em]">
@@ -154,7 +154,7 @@ export function VentureBuildingSolutionPage() {
         </div>
       </section>
 
-      {/* What we bring — dense list */}
+      {/* What we bring, dense list */}
       <section className="border-y border-black/10 bg-[#111414] text-white">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-8 py-16 md:grid-cols-[0.7fr_1.3fr] md:px-12 xl:px-[72px]">
           <h2 className="font-display text-[2.2rem] font-semibold leading-[1.1]">
@@ -175,7 +175,7 @@ export function VentureBuildingSolutionPage() {
         </div>
       </section>
 
-      {/* Proof — stacked full-bleed bands, not twin cards */}
+      {/* Proof, stacked full-bleed bands, not twin cards */}
       <section className="bg-[#f8f2e9] text-[#141414]">
         <div className="mx-auto max-w-[1500px] px-8 py-6 md:px-12 xl:px-[72px]">
           <h2 className="py-8 font-display text-[2.2rem] font-semibold">
@@ -245,7 +245,7 @@ export function VentureBuildingSolutionPage() {
         </div>
       </section>
 
-      {/* Close — dark again */}
+      {/* Close, dark again */}
       <section className="border-t border-white/10 bg-[#111414] text-white">
         <div className="mx-auto flex max-w-[1500px] flex-col gap-10 px-8 py-16 md:flex-row md:items-end md:justify-between md:px-12 xl:px-[72px]">
           <div>

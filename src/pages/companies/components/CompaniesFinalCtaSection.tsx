@@ -7,11 +7,11 @@ export function CompaniesFinalCtaSection() {
         <h2 className="font-display text-[2.45rem] font-semibold leading-[0.98] tracking-[-0.025em] text-[#15110f] md:text-[3rem]">
           Need one specialist
           <br />
-          — or the whole system?
+          or the whole system?
         </h2>
         <p className="border-t border-black/14 pt-5 text-[0.74rem] leading-[1.6] text-[#151515]/62 md:border-l md:border-t-0 md:py-4 md:pl-10">
-          Tell us what you are building. We will route the right ANTIKRA company
-          — or assemble the combination the work requires.
+          Tell us what you are building. We will route the right ANTIKRA company,
+          or assemble the combination the work requires.
         </p>
         <div className="flex flex-wrap items-center gap-7 border-t border-black/14 pt-5 md:border-l md:border-t-0 md:py-4 md:pl-10">
           <a

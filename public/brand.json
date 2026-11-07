@@ -1,0 +1,73 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://antikra.com/#organization",
+  "name": "ANTIKRA",
+  "legalName": "ANTIKRA Group",
+  "alternateName": ["ANTIKRA Group", "Antikra"],
+  "url": "https://antikra.com",
+  "slogan": "Technology, built as a system.",
+  "description": "ANTIKRA is a global technology group of six specialist companies building products, infrastructure, intelligence, security, experience and ventures for complex environments worldwide.",
+  "foundingDate": "2024",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://antikra.com/antikra-logo.png",
+    "contentUrl": "https://antikra.com/antikra-logo.png",
+    "width": 1254,
+    "height": 1254,
+    "encodingFormat": "image/png",
+    "caption": "ANTIKRA logo"
+  },
+  "image": [
+    "https://antikra.com/antikra-logo.png",
+    "https://antikra.com/leadership/mpango-hamza.jpg",
+    "https://antikra.com/leadership/kapeere-bonny.jpg"
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "ANTIKRA",
+    "logo": "https://antikra.com/antikra-logo.png",
+    "url": "https://antikra.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kampala",
+    "addressCountry": "UG"
+  },
+  "founder": [
+    {
+      "@type": "Person",
+      "@id": "https://antikra.com/company/leadership#mpango-hamza",
+      "name": "Mpango Hamza Rahman",
+      "jobTitle": "Founder, Chairman & Director",
+      "url": "https://antikra.com/company/leadership#mpango-hamza",
+      "image": "https://antikra.com/leadership/mpango-hamza.jpg"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://antikra.com/company/leadership#kapeere-bonny",
+      "name": "Kapeere Bonny",
+      "jobTitle": "Co-Founder & Director",
+      "url": "https://antikra.com/company/leadership#kapeere-bonny",
+      "image": "https://antikra.com/leadership/kapeere-bonny.jpg"
+    }
+  ],
+  "sameAs": [
+    "https://linkedin.com/company/antikragroup",
+    "https://twitter.com/antikragroup"
+  ],
+  "assets": {
+    "logo": "https://antikra.com/antikra-logo.png",
+    "favicon": "https://antikra.com/favicon.svg",
+    "manifest": "https://antikra.com/manifest.json",
+    "llms": "https://antikra.com/llms.txt",
+    "llmsFull": "https://antikra.com/llms-full.txt",
+    "leadership": {
+      "page": "https://antikra.com/company/leadership",
+      "portraits": {
+        "mpango-hamza": "https://antikra.com/leadership/mpango-hamza.jpg",
+        "kapeere-bonny": "https://antikra.com/leadership/kapeere-bonny.jpg"
+      }
+    }
+  }
+}

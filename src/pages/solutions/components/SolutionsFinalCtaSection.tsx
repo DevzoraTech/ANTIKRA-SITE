@@ -10,7 +10,7 @@ export function SolutionsFinalCtaSection() {
           that crosses teams?
         </h2>
         <p className="border-t border-black/14 pt-5 text-[0.74rem] leading-[1.6] text-[#151515]/62 md:border-l md:border-t-0 md:py-4 md:pl-10">
-          That is usually where ANTIKRA is strongest — assembling the right
+          That is usually where ANTIKRA is strongest: assembling the right
           specialists into one delivery system.
         </p>
         <div className="flex flex-wrap items-center gap-7 border-t border-black/14 pt-5 md:border-l md:border-t-0 md:py-4 md:pl-10">

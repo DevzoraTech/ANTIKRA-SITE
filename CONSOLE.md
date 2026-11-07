@@ -1,6 +1,6 @@
 # ANTIKRA Console
 
-Console is the transactional and operational layer of antikra.com—not a client
+Console is the transactional and operational layer of antikra.com, not a client
 portal bolted onto the marketing site, and not one giant dashboard.
 
 ```text
@@ -15,13 +15,13 @@ relationship with ANTIKRA.
 
 ## Product model (build in this order)
 
-1. **Identity** — One ANTIKRA Account.
-2. **Organizations & memberships** — Client orgs, ventures, research collabs, product tenants, partners, internal staff.
-3. **Roles & permissions** — What a membership can see and change.
-4. **Platform objects** — Project, Decision, Request, Release, Environment, Document, Billing, Support, Activity (plus Venture / Research / Contract where needed).
-5. **Console navigation** — Per workspace type, not one mega-menu.
-6. **Workflows** — Approvals, request lifecycle, release notes, support.
-7. **Home experience** — “What is happening between you and ANTIKRA?”
+1. **Identity**, One ANTIKRA Account.
+2. **Organizations & memberships**, Client orgs, ventures, research collabs, product tenants, partners, internal staff.
+3. **Roles & permissions**, What a membership can see and change.
+4. **Platform objects**, Project, Decision, Request, Release, Environment, Document, Billing, Support, Activity (plus Venture / Research / Contract where needed).
+5. **Console navigation**, Per workspace type, not one mega-menu.
+6. **Workflows**, Approvals, request lifecycle, release notes, support.
+7. **Home experience**, “What is happening between you and ANTIKRA?”
 
 Do not design vanity dashboards before this model is stable.
 
@@ -60,9 +60,9 @@ Client Partner Internal workspaces
 - Console does **not** replace Rembeh or Carmie applications; it manages
   relationship, administration and access, then deep-links.
 - Console should **orchestrate** ANTIKRA’s operating model and integrate
-  specialist tools—not rebuild Jira + Slack + Drive + accounting at once.
+  specialist tools, not rebuild Jira + Slack + Drive + accounting at once.
 - Clients must never see internal-only information.
-- Environments may show health/version—not secrets or credentials.
+- Environments may show health/version, not secrets or credentials.
 - AI in Console should operate over permitted structured objects, not as a
   floating marketing chatbot.
 

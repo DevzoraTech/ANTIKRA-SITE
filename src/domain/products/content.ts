@@ -279,7 +279,7 @@ export const carmieProductPage: ProductDetailPageContent = {
   product: carmieSummary,
   lead: "Automotive service, connected.",
   summary:
-    "Carmie connects vehicle owners with workshops, service providers and mobility operations — so maintenance, bookings and service history live in one system.",
+    "Carmie connects vehicle owners with workshops, service providers and mobility operations so maintenance, bookings and service history live in one system.",
   flowLabel: "Built around how automotive service actually runs.",
   ctaTitle: "Connect vehicle service end to end.",
   ctaBody:

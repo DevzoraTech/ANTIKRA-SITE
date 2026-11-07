@@ -3,7 +3,7 @@ import type { ConsoleGateContent } from "./models"
 export const consoleGate: ConsoleGateContent = {
   lead: "Work with ANTIKRA.",
   summary:
-    "Continue projects, review documents, approve decisions, raise requests, and manage your product relationship—in one place.",
+    "Continue projects, review documents, approve decisions, raise requests, and manage your product relationship in one place.",
   uses: [
     {
       title: "Projects",

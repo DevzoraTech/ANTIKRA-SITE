@@ -78,7 +78,7 @@ export const researchPublications: ResearchPublication[] = [
       "Most technology advice assumes stable connectivity, abundant capital and clean institutional interfaces. Many of the environments where ANTIKRA builds do not.",
       "Constraint is not an edge case. Intermittent networks, distributed operations, uneven documentation and high operational stakes are the normal conditions of work.",
       "Designing for constraint changes architecture: offline-first behavior, clearer ownership boundaries, observability that survives partial failure, and interfaces that respect how people actually work.",
-      "Research before assumption is how we avoid importing models that look sophisticated and fail in production. The job is not to romanticize difficulty—it is to engineer systems that remain useful when conditions are imperfect.",
+      "Research before assumption is how we avoid importing models that look sophisticated and fail in production. The job is not to romanticize difficulty; it is to engineer systems that remain useful when conditions are imperfect.",
       "This note is a starting frame for ANTIKRA Research: study the operating environment first, then choose the technology.",
     ],
   },

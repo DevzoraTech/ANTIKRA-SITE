@@ -1,5 +1,5 @@
 # ════════════════════════════════════════════════════════════
-# ANTIKRA — robots.txt
+# ANTIKRA, robots.txt
 # https://antikra.com
 # ════════════════════════════════════════════════════════════
 
@@ -20,6 +20,14 @@ Allow: /antikra-logo.png
 Allow: /favicon.svg
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /brand.json
+Allow: /leadership/
+Allow: /leadership/*.jpg
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
 
 # Google
 User-agent: Googlebot
@@ -31,7 +39,11 @@ Crawl-delay: 0
 User-agent: Googlebot-Image
 Allow: /
 Allow: /antikra-logo.png
+Allow: /leadership/
+Allow: /leadership/*.jpg
 Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
 Allow: /*.webp$
 Allow: /*.svg$
 Disallow: /console
@@ -94,6 +106,7 @@ Disallow: /console
 User-agent: facebookexternalhit
 Allow: /
 Allow: /antikra-logo.png
+Allow: /leadership/
 
 User-agent: Facebot
 Allow: /
@@ -101,14 +114,17 @@ Allow: /
 User-agent: Twitterbot
 Allow: /
 Allow: /antikra-logo.png
+Allow: /leadership/
 
 User-agent: LinkedInBot
 Allow: /
 Allow: /antikra-logo.png
+Allow: /leadership/
 
 User-agent: WhatsApp
 Allow: /
 Allow: /antikra-logo.png
+Allow: /leadership/
 
 User-agent: Slackbot
 Allow: /

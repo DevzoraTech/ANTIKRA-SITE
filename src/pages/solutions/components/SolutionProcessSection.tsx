@@ -19,7 +19,7 @@ export function SolutionProcessSection() {
             system.
           </h2>
           <p className="mt-5 max-w-[230px] text-[0.78rem] leading-[1.5] text-[#161616]/55">
-            A shared sequence — with the right ANTIKRA companies activated at
+            A shared sequence, with the right ANTIKRA companies activated at
             each stage.
           </p>
         </div>

@@ -43,7 +43,7 @@ export function CareersPage() {
           </h1>
           <p className="mt-6 max-w-[460px] text-[0.95rem] leading-[1.6] text-[#2c2824]">
             Join a team building products, infrastructure and technology companies
-            around real problems—where work moves from ideas into systems people use.
+            around real problems where work moves from ideas into systems people use.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
@@ -182,7 +182,7 @@ export function CareersPage() {
             <div className="mt-10 border border-black/10 bg-[#f4eee5] p-8">
               <p className="font-display text-[1.4rem] font-semibold">No open roles right now</p>
               <p className="mt-2 text-[0.9rem] text-[#2c2824]">
-                Introduce yourself—we keep strong people in mind.
+                Introduce yourself. We keep strong people in mind.
               </p>
               <a
                 href="/company/contact"

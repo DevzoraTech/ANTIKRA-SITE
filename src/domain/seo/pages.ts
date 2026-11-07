@@ -5,6 +5,12 @@ export interface PageSeo {
   keywords?: string
   type?: "website" | "article"
   noindex?: boolean
+  /** Absolute or site-relative OG / schema image. Defaults to brand logo. */
+  image?: string
+  imageAlt?: string
+  imageType?: string
+  imageWidth?: number
+  imageHeight?: number
 }
 
 const site = "https://antikra.com"
@@ -33,6 +39,10 @@ export const defaultKeywords = [
   "Kampala",
   "Uganda",
   "Africa technology",
+  "Mpango Hamza Rahman",
+  "Kapeere Bonny",
+  "ANTIKRA leadership",
+  "ANTIKRA founders",
 ].join(", ")
 
 /** Canonical SEO registry for every public route. */
@@ -41,14 +51,14 @@ export const seoPages: Record<string, PageSeo> = {
     path: "/",
     title: "ANTIKRA | Global Technology Group",
     description:
-      "ANTIKRA is a global technology group designing, engineering and operating products, infrastructure and companies for complex environments—with operations including Kampala, Uganda.",
+      "ANTIKRA is a global technology group designing, engineering and operating products, infrastructure and companies for complex environments, with operations including Kampala, Uganda.",
     keywords: defaultKeywords,
   },
   "/companies": {
     path: "/companies",
     title: "Companies | ANTIKRA",
     description:
-      "Six specialist ANTIKRA companies—Mechanism, Cosmos, Orrery, Astra, Helios and Olympia—working as one global technology system.",
+      "Six specialist ANTIKRA companies (Mechanism, Cosmos, Orrery, Astra, Helios and Olympia) working as one global technology system.",
   },
   "/companies/mechanism": {
     path: "/companies/mechanism",
@@ -90,7 +100,7 @@ export const seoPages: Record<string, PageSeo> = {
     path: "/products",
     title: "Products | ANTIKRA",
     description:
-      "Technology products built, owned and operated by ANTIKRA—including Rembeh and Carmie.",
+      "Technology products built, owned and operated by ANTIKRA, including Rembeh and Carmie.",
   },
   "/products/rembeh": {
     path: "/products/rembeh",
@@ -144,13 +154,13 @@ export const seoPages: Record<string, PageSeo> = {
     path: "/solutions/venture-building",
     title: "Venture Building | ANTIKRA Solutions",
     description:
-      "From opportunity to operating company—venture building with ANTIKRA Olympia and the group system.",
+      "From opportunity to operating company: venture building with ANTIKRA Olympia and the group system.",
   },
   "/work": {
     path: "/work",
     title: "Work | ANTIKRA",
     description:
-      "Selected ANTIKRA work—Rembeh, Carmie, Grid Insights and systems delivered across the global group.",
+      "Selected ANTIKRA work: Rembeh, Carmie, Grid Insights and systems delivered across the global group.",
   },
   "/work/rembeh": {
     path: "/work/rembeh",
@@ -168,7 +178,7 @@ export const seoPages: Record<string, PageSeo> = {
     path: "/work/grid-insights",
     title: "Grid Insights Case Study | ANTIKRA Work",
     description:
-      "AI-powered analytics for energy infrastructure—intelligence work across Orrery, Cosmos and Astra.",
+      "AI-powered analytics for energy infrastructure: intelligence work across Orrery, Cosmos and Astra.",
   },
   "/research": {
     path: "/research",
@@ -194,25 +204,45 @@ export const seoPages: Record<string, PageSeo> = {
     path: "/company",
     title: "Company | ANTIKRA",
     description:
-      "ANTIKRA is a global technology group—six specialist companies, shared capability, and outputs across products, solutions, ventures and research.",
+      "ANTIKRA is a global technology group, six specialist companies, shared capability, and outputs across products, solutions, ventures and research. Founded and led by Mpango Hamza Rahman and Kapeere Bonny.",
+    keywords: `${defaultKeywords}, ANTIKRA company, ANTIKRA Group Kampala`,
+    image: `${site}/antikra-logo.png`,
+    imageAlt: "ANTIKRA logo: Global technology group",
   },
   "/company/leadership": {
     path: "/company/leadership",
-    title: "Leadership | ANTIKRA",
+    title: "Leadership | Mpango Hamza Rahman & Kapeere Bonny | ANTIKRA",
     description:
-      "Meet the people shaping ANTIKRA—technology, strategy and institutional direction for a global technology group.",
+      "ANTIKRA leadership: Mpango Hamza Rahman, Founder, Chairman & Director, and Kapeere Bonny, Co-Founder & Director. Direction and technology leadership for ANTIKRA Group.",
+    keywords: [
+      "ANTIKRA leadership",
+      "ANTIKRA founders",
+      "Mpango Hamza Rahman",
+      "Mpango Hamza",
+      "Kapeere Bonny",
+      "ANTIKRA Chairman",
+      "ANTIKRA Co-Founder",
+      "ANTIKRA Group leadership",
+      "Kampala technology founders",
+      defaultKeywords,
+    ].join(", "),
+    image: `${site}/leadership/mpango-hamza.jpg`,
+    imageAlt: "Mpango Hamza Rahman, Founder, Chairman & Director of ANTIKRA",
+    imageType: "image/jpeg",
+    imageWidth: 1200,
+    imageHeight: 1500,
   },
   "/company/careers": {
     path: "/company/careers",
     title: "Careers | ANTIKRA",
     description:
-      "Build consequential technology with ANTIKRA—open roles across Mechanism, Cosmos, Orrery and the wider group.",
+      "Build consequential technology with ANTIKRA: open roles across Mechanism, Cosmos, Orrery and the wider group.",
   },
   "/company/contact": {
     path: "/company/contact",
     title: "Contact | ANTIKRA",
     description:
-      "Tell ANTIKRA what you need—a product, infrastructure, venture, research collaboration or partnership.",
+      "Tell ANTIKRA what you need: a product, infrastructure, venture, research collaboration or partnership.",
   },
   "/privacy": {
     path: "/privacy",
@@ -235,7 +265,7 @@ export const seoPages: Record<string, PageSeo> = {
   "/console": {
     path: "/console",
     title: "Console | ANTIKRA",
-    description: "Work with ANTIKRA in Console—projects, decisions, documents, billing and support.",
+    description: "Work with ANTIKRA in Console: projects, decisions, documents, billing and support.",
     noindex: true,
   },
 }

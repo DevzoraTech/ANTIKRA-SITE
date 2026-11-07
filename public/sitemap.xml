@@ -5,7 +5,7 @@
 
   <url>
     <loc>https://antikra.com/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://antikra.com/" />
@@ -13,6 +13,7 @@
     <image:image>
       <image:loc>https://antikra.com/antikra-logo.png</image:loc>
       <image:title>ANTIKRA company logo</image:title>
+      <image:caption>Official ANTIKRA logo</image:caption>
     </image:image>
   </url>
 
@@ -45,10 +46,46 @@
   <url><loc>https://antikra.com/research/systems-under-constraint</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://antikra.com/research/digital-operations-in-distributed-lending</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url><loc>https://antikra.com/company</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
-  <url><loc>https://antikra.com/company/leadership</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://antikra.com/company</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+    <image:image>
+      <image:loc>https://antikra.com/antikra-logo.png</image:loc>
+      <image:title>ANTIKRA logo</image:title>
+      <image:caption>ANTIKRA Group brand mark</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://antikra.com/company/leadership</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://antikra.com/antikra-logo.png</image:loc>
+      <image:title>ANTIKRA logo</image:title>
+      <image:caption>Official ANTIKRA logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://antikra.com/leadership/mpango-hamza.jpg</image:loc>
+      <image:title>Mpango Hamza Rahman</image:title>
+      <image:caption>Mpango Hamza Rahman, Founder, Chairman and Director of ANTIKRA</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://antikra.com/leadership/kapeere-bonny.jpg</image:loc>
+      <image:title>Kapeere Bonny</image:title>
+      <image:caption>Kapeere Bonny, Co-Founder and Director of ANTIKRA</image:caption>
+    </image:image>
+  </url>
   <url><loc>https://antikra.com/company/careers</loc><lastmod>2026-09-17</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://antikra.com/company/contact</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://antikra.com/brand.json</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://antikra.com/llms.txt</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://antikra.com/llms-full.txt</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://antikra.com/antikra-logo.png</loc><lastmod>2026-11-07</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://antikra.com/leadership/mpango-hamza.jpg</loc><lastmod>2026-11-07</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://antikra.com/leadership/kapeere-bonny.jpg</loc><lastmod>2026-11-07</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
   <url><loc>https://antikra.com/privacy</loc><lastmod>2026-09-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://antikra.com/terms</loc><lastmod>2026-09-17</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>

@@ -21,7 +21,7 @@ export function ProductNextSection() {
           </h2>
           <p className="mt-5 max-w-[400px] text-[0.88rem] leading-[1.58] text-white/62">
             Olympia continuously evaluates opportunities for new ANTIKRA
-            products — always measured against real operational need.
+            products, always measured against real operational need.
           </p>
         </div>
 

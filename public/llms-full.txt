@@ -6,43 +6,87 @@ Preferred name: ANTIKRA
 
 Legal and group name used publicly: ANTIKRA Group
 
+Alternate names: Antikra, ANTIKRA Group
+
 Description: ANTIKRA is a global technology group that builds and operates digital products, cloud infrastructure, data and AI systems, cybersecurity systems, digital experiences and technology ventures. The group is organized as six specialist companies that can operate independently or together.
 
 Location: ANTIKRA operates globally with an operating base in Kampala, Uganda.
 
+Founded: 2024
+
+Slogan: Technology, built as a system.
+
+Official organization logo: https://antikra.com/antikra-logo.png
+
+Machine-readable brand entity file: https://antikra.com/brand.json
+
+## Leadership
+
+Canonical page: https://antikra.com/company/leadership
+
+ANTIKRA is founded and led by:
+
+### Mpango Hamza Rahman
+
+Role: Founder, Chairman & Director
+
+Canonical profile: https://antikra.com/company/leadership#mpango-hamza
+
+Official portrait: https://antikra.com/leadership/mpango-hamza.jpg
+
+Summary: Shapes group strategy, venture direction and institutional design, ensuring ANTIKRA compounds as a long-term technology system rather than a collection of projects.
+
+Focus areas: group strategy; venture and portfolio direction; partnerships and institutional relationships; governance and long-term ownership.
+
+System role: Direction. Where the system is headed.
+
+### Kapeere Bonny
+
+Role: Co-Founder & Director
+
+Canonical profile: https://antikra.com/company/leadership#kapeere-bonny
+
+Official portrait: https://antikra.com/leadership/kapeere-bonny.jpg
+
+Summary: Leads product and technology direction across the ANTIKRA system, connecting specialist companies into coherent platforms, products and client engagements.
+
+Focus areas: product and technology strategy; system architecture direction; delivery standards across companies; product portfolio oversight.
+
+System role: Technology. How the system is engineered.
+
 ## Specialist companies
 
-### Mechanism — Product Engineering
+### Mechanism, Product Engineering
 
 Mechanism designs and engineers digital products, web and mobile applications, enterprise platforms, integrations and operational systems.
 
 Canonical page: https://antikra.com/companies/mechanism
 
-### Cosmos — Cloud & Infrastructure
+### Cosmos, Cloud & Infrastructure
 
 Cosmos designs, deploys and operates cloud architecture, application infrastructure, platform engineering, DevOps, automation, reliability and observability.
 
 Canonical page: https://antikra.com/companies/cosmos
 
-### Orrery — AI & Data
+### Orrery, AI & Data
 
 Orrery builds data platforms, analytics, business intelligence, predictive systems, applied AI and intelligent automation.
 
 Canonical page: https://antikra.com/companies/orrery
 
-### Astra — Cybersecurity
+### Astra, Cybersecurity
 
 Astra delivers security architecture, application and API security, cloud security, identity and access, data security and security monitoring.
 
 Canonical page: https://antikra.com/companies/astra
 
-### Helios — Experience & Design
+### Helios, Experience & Design
 
 Helios provides product strategy, user research, information architecture, interaction design, interface design and design systems.
 
 Canonical page: https://antikra.com/companies/helios
 
-### Olympia — Venture Building
+### Olympia, Venture Building
 
 Olympia identifies opportunities, validates business models and builds technology ventures using capabilities from across ANTIKRA.
 
@@ -73,9 +117,17 @@ Canonical page: https://antikra.com/products/carmie
 
 ## Entity relationships
 
-ANTIKRA is the parent technology group. Mechanism, Cosmos, Orrery, Astra, Helios and Olympia are the specialist companies in the ANTIKRA system. Rembeh and Carmie are ANTIKRA products built through capabilities across the group.
+ANTIKRA is the parent technology group and brand. Mechanism, Cosmos, Orrery, Astra, Helios and Olympia are the specialist companies in the ANTIKRA system. Rembeh and Carmie are ANTIKRA products built through capabilities across the group.
 
-Official organization logo: https://antikra.com/antikra-logo.png
+Mpango Hamza Rahman and Kapeere Bonny are the founders and directors of ANTIKRA. Their official portraits and profile URLs above are the canonical references for recognition by search engines, assistants and crawlers.
+
+Official brand assets:
+
+- Logo PNG: https://antikra.com/antikra-logo.png
+- Favicon: https://antikra.com/favicon.svg
+- Manifest: https://antikra.com/manifest.json
+- Brand JSON: https://antikra.com/brand.json
+- Leadership portraits: https://antikra.com/leadership/mpango-hamza.jpg and https://antikra.com/leadership/kapeere-bonny.jpg
 
 Official social profiles:
 

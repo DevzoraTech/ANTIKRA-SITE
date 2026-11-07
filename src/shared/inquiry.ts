@@ -1,4 +1,4 @@
-/** Inquiry mailbox — used for mailto only. Never render in UI. */
+/** Inquiry mailbox, used for mailto only. Never render in UI. */
 export const INQUIRY_MAILBOX = "antikra.ug@gmail.com"
 
 export function openInquiry(subject: string, body = "") {
